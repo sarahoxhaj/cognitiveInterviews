@@ -10,7 +10,7 @@
                 of other data representations:</p>
             <div class="flex justify-center space-x-4 px-16">
                 <img @click="openImage(require('@/assets/test.png'))" src="@/assets/test.png" alt="Image 1"
-                    class="mt-5 cursor-pointer hover:scale-105 transition-transform duration-150 h-[12rem]">
+                    class="mt-5 h-[12rem]">
             </div>
 
             <p class="mt-5">The table below includes statements generated from a combination of deductive and inductive
@@ -36,6 +36,67 @@
                     visualization?</b></p>
 
 
+            <div
+                class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border border-default mt-10">
+                <table class="w-full text-sm text-left rtl:text-right text-body">
+                    <thead class="text-sm text-body bg-neutral-secondary-soft border-b rounded-base border-default">
+                        <tr>
+                            <th scope="col" class="px-6 py-3 font-medium">
+
+                            </th>
+                            <th scope="col" class="px-6 py-3 font-medium">
+                                1: not at all relevant
+                            </th>
+                            <th scope="col" class="px-6 py-3 font-medium">
+                                2
+                            </th>
+                            <th scope="col" class="px-6 py-3 font-medium">
+                                3
+                            </th>
+                            <th scope="col" class="px-6 py-3 font-medium">
+                                4
+                            </th>
+                            <th scope="col" class="px-6 py-3 font-medium">
+                                5: very relevant
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class>
+                        <tr class="bg-neutral-primary border-b border-default ">
+                            <th scope="row" class="px-6 py-4 font-medium text-heading whitespace-nowrap text-right">
+                                I find this visualization informative.
+                            </th>
+                            <td class="px-6 py-4 pl-20">
+                                <label class="flex items-center dark:text-white">
+                                    <input type="radio" name="choice" value="s1-1" style="width: 24px; height: 24px;">
+                                </label>
+                            </td>
+                            <td class="px-6 py-4 ">
+                                <label class="flex items-center dark:text-white">
+                                    <input type="radio" name="choice" value="s1-2" style="width: 24px; height: 24px;">
+                                </label>
+                            </td>
+                            <td class="px-6 py-4">
+                                <label class="flex items-center dark:text-white">
+                                    <input type="radio" name="choice" value="s1-3" style="width: 24px; height: 24px;">
+                                </label>
+                            </td>
+                            <td class="px-6 py-4">
+                                <label class="flex items-center dark:text-white">
+                                    <input type="radio" name="choice" value="s1-4" style="width: 24px; height: 24px;">
+                                </label>
+                            </td>
+                            <td class="px-6 py-4 ">
+                                <label class="flex items-center dark:text-white">
+                                    <input type="radio" name="choice" value="s1-5" style="width: 24px; height: 24px;">
+                                </label>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
 
 
 
@@ -51,15 +112,6 @@
         </div>
     </div>
 
-    <div v-if="showImage" class="fixed inset-0 z-50 bg-black bg-opacity-80 flex items-center justify-center">
-        <div class="relative">
-            <img :src="currentImage" class="max-h-[90vh] max-w-[90vw] rounded shadow-lg" />
-            <button @click="closeImage"
-                class="absolute top-2 right-2 text-white bg-black bg-opacity-70 hover:bg-opacity-90 rounded-full w-10 h-10 text-xl font-bold flex items-center justify-center">
-                ✕
-            </button>
-        </div>
-    </div>
 
 </template>
 

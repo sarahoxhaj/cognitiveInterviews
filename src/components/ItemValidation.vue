@@ -358,14 +358,14 @@ export default {
             additionalComment: ""
         };
     },
-    mounted() {
-        this.userID = sessionStorage.getItem("userID");
+    // mounted() {
+    //     this.userID = sessionStorage.getItem("userID");
 
-        if (!this.userID) {
-            alert("User ID not found. Please fill out the background information first.");
-            this.$router.push('/BackgroundView');
-        }
-    },
+    //     if (!this.userID) {
+    //         alert("User ID not found. Please fill out the background information first.");
+    //         this.$router.push('/BackgroundView');
+    //     }
+    // },
     methods: {
         async saveDataToFirebase() {
             // validate ratings

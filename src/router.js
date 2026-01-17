@@ -4,6 +4,7 @@ import FirstView from "./components/FirstView.vue";
 import ConsentForm  from "./components/ConsentForm.vue";
 import BackgroundView from "./components/BackgroundView"
 import ItemValidation from "./components/ItemValidation.vue"
+import LastView from "./components/LastView.vue"
 
 const routes = [
   {
@@ -25,6 +26,11 @@ const routes = [
     path: "/ItemValidation",
     name: "ItemValidation",
     component: ItemValidation,
+  },
+  {
+    path: "/LastView",
+    name: "LastView",
+    component: LastView,
   },
 ];
 

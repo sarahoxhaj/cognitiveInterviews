@@ -368,6 +368,7 @@ export default {
     },
     methods: {
         async saveDataToFirebase() {
+            // validate ratings
             for (const [, value] of Object.entries(this.ratings)) {
                 if (value === null) {
                     alert("Please answer all statements before continuing.");
@@ -376,23 +377,36 @@ export default {
             }
 
             try {
-                const data = {
+                // Prepare user info from session
+                const userData = {
+                    id: this.userID,
+                    gender: sessionStorage.getItem("gender"),
+                    age: sessionStorage.getItem("age"),
+                    years: sessionStorage.getItem("years")
+                };
+
+                // Save user info in its own collection
+                await addDoc(collection(db, "userData"), userData);
+                console.log("User info saved:", userData);
+
+                // Prepare ratings data
+                const ratingsData = {
                     userID: this.userID,
                     ratings: this.ratings,
                     additionalComment: this.additionalComment
                 };
 
-                await addDoc(collection(db, "item-validation"), data);
-                console.log("Data successfully saved:", data);
+                // Save ratings in a separate collection
+                await addDoc(collection(db, "item-validation"), ratingsData);
+                console.log("Ratings successfully saved:", ratingsData);
 
                 this.$router.push('/LastView');
 
             } catch (error) {
                 console.error("Error saving data:", error);
-                alert("Error saving your answers.");
+                alert("There was an error saving your data. Please try again.");
             }
         }
-
     }
 }
 </script>

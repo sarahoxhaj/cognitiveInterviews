@@ -98,8 +98,6 @@
 </template>
 
 <script>
-import { collection, addDoc } from "firebase/firestore";
-import { db } from "../firebase";
 export default {
     name: 'BackgroundView',
     data() {
@@ -142,25 +140,9 @@ export default {
             sessionStorage.setItem("years", yearsInput);
             sessionStorage.setItem("age", ageInput);
 
-            try {
-                // generate 5 digit number for unique ID
-                const uniqueID = Math.floor(10000 + Math.random() * 90000).toString();
+            console.log("Data successfully saved in session")
 
-                await addDoc(collection(db, "userData"), {
-                    id: uniqueID,
-                    gender: gender,
-                    years: yearsInput,
-                    age: ageInput,
-                });
-                sessionStorage.setItem("userID", uniqueID);
-                console.log("Data successfully saved to Firebase");
-            } catch (error) {
-                console.error("Error saving data to Firebase:", error);
-                alert("There was an error saving your data. Please try again.");
-                return;
-            }
-
-            this.$router.replace('/ItemValidation');
+            this.$router.push('/ItemValidation');
         }
     }
 }

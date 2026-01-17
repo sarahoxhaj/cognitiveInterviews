@@ -124,8 +124,8 @@ export default {
             }
 
             const yearsInput = this.years;
-            const ageInput = this.age;  
-            const userID = this.generateUserID();
+            const ageInput = this.age;
+            const userID = Math.floor(10000 + Math.random() * 90000).toString();
 
 
             if (isNaN(yearsInput) || yearsInput === '') {
@@ -137,7 +137,7 @@ export default {
                 alert("Please select your age group.");
                 return;
             }
-            
+
             sessionStorage.setItem("userID", userID);
             sessionStorage.setItem("gender", gender);
             sessionStorage.setItem("years", yearsInput);

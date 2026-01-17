@@ -160,7 +160,7 @@ export default {
                 return;
             }
 
-            this.$router.push('/ItemValidation');
+            this.$router.replace('/ItemValidation');
         }
     }
 }

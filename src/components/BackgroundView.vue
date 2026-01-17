@@ -124,7 +124,9 @@ export default {
             }
 
             const yearsInput = this.years;
-            const ageInput = this.age;
+            const ageInput = this.age;  
+            const userID = this.generateUserID();
+
 
             if (isNaN(yearsInput) || yearsInput === '') {
                 alert("Please enter a valid number for the second question.");
@@ -135,7 +137,8 @@ export default {
                 alert("Please select your age group.");
                 return;
             }
-
+            
+            sessionStorage.setItem("userID", userID);
             sessionStorage.setItem("gender", gender);
             sessionStorage.setItem("years", yearsInput);
             sessionStorage.setItem("age", ageInput);

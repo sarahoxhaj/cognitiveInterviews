@@ -3,14 +3,62 @@
     <div class="bg-gray-50 dark:bg-slate-600 flex flex-col min-h-screen pb-8">
         <p class="mb-2 text-2xl tracking-tight text-gray-900 dark:text-white mt-7 text-center">Rating the relevance of
             statements to assess perceived visual complexity.</p>
+
         <div class="text-left px-24 mt-7 dark:text-white">
-            <p> We would like you to rate different statements according to how relevant you consider them for judging a
-                study participant's <b>perception of the visual complexity of a visualization.</b> Below are examples of
-                visualizations which could be used as stimuli in such a study, but you can think
-                of other data representations:</p>
-            <div class="flex justify-center space-x-4 px-16">
-                <img @click="openImage(require('@/assets/test.png'))" src="@/assets/test.png" alt="Image 1"
-                    class="mt-5 h-[12rem]">
+            <div>
+                <p> We would like you to rate different statements according to how relevant you consider them for
+                    judging a
+                    study participant's <b>perception of the visual complexity of a visualization.</b> Below are
+                    examples of
+                    visualizations which could be used as stimuli in such a study, but you can think
+                    of other data representations:</p>
+
+                <div class="flex justify-end -mt-5">
+                    <button @click.prevent="showOption1 = !showOption1" type="submit"
+                        class="bg-sky-900 hover:bg-sky-800 text-white px-4 py-2 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto text-center">
+                        change images
+                    </button>
+                </div>
+            </div>
+
+            <!-- option 1 -->
+            <div v-if="showOption1">
+                <div class="flex justify-center space-x-4 px-16 mt-6">
+                    <img @click="openImage(require('@/assets/2.4.png'))" src="@/assets/2.4.png" alt="Image 1"
+                        class="w-[15rem] h-[11rem]">
+                    <img @click="openImage(require('@/assets/2.3.png'))" src="@/assets/2.3.png" alt="Image 2"
+                        class="w-[14rem] h-[11rem]">
+                    <img @click="openImage(require('@/assets/2.7.png'))" src="@/assets/2.7.png" alt="Image 3"
+                        class="w-[15rem] h-[11rem]">
+                </div> <br>
+                <div class="flex justify-center space-x-4 px-16 mb-10">
+                    <img @click="openImage(require('@/assets/2.11.png'))" src="@/assets/2.11.png" alt="Image 4"
+                        class="w-[15rem] h-[11rem]">
+                    <img @click="openImage(require('@/assets/1.1.png'))" src="@/assets/1.1.png" alt="Image 5"
+                        class="w-[15rem] h-[12rem]">
+                    <img @click="openImage(require('@/assets/1.2.png'))" src="@/assets/1.2.png" alt="Image 6"
+                        class="w-[16rem] h-[12rem]">
+                </div>
+            </div>
+
+            <!-- option 2 -->
+            <div v-else>
+                <div class="flex justify-center space-x-4 px-16 mt-6">
+                    <img @click="openImage(require('@/assets/2.1.png'))" src="@/assets/2.1.png" alt="Image 1"
+                        class="w-[14rem] h-[11rem]">
+                    <img @click="openImage(require('@/assets/2.10.png'))" src="@/assets/2.10.png" alt="Image 3"
+                        class="w-[15rem] h-[11rem]">
+                    <img @click="openImage(require('@/assets/2.2.png'))" src="@/assets/2.2.png" alt="Image 2"
+                        class="w-[14rem] h-[11rem]">
+                </div> <br>
+                <div class="flex justify-center space-x-4 px-16 mb-10 ml-8">
+                    <img @click="openImage(require('@/assets/2.14.png'))" src="@/assets/2.14.png" alt="Image 4"
+                        class="w-[13rem] h-[11rem]">
+                    <img @click="openImage(require('@/assets/1.3.png'))" src="@/assets/1.3.png" alt="Image 6"
+                        class="w-[13rem] h-[12rem]">
+                    <img @click="openImage(require('@/assets/1.2.png'))" src="@/assets/1.2.png" alt="Image 5"
+                        class="w-[17rem] h-[12rem]">
+                </div>
             </div>
 
             <p class="mt-5">The table below includes statements generated from a combination of deductive and inductive
@@ -355,9 +403,11 @@ export default {
                 q6: null,
                 q7: null
             },
-            additionalComment: ""
+            additionalComment: "",
+            showOption1: true
         };
     },
+
     mounted() {
         this.userID = sessionStorage.getItem("userID");
 
@@ -368,7 +418,6 @@ export default {
     },
     methods: {
         async saveDataToFirebase() {
-            // validate ratings
             for (const [, value] of Object.entries(this.ratings)) {
                 if (value === null) {
                     alert("Please answer all statements before continuing.");
@@ -377,7 +426,6 @@ export default {
             }
 
             try {
-                // Prepare user info from session
                 const userData = {
                     id: this.userID,
                     gender: sessionStorage.getItem("gender"),
@@ -385,18 +433,15 @@ export default {
                     years: sessionStorage.getItem("years")
                 };
 
-                // Save user info in its own collection
                 await addDoc(collection(db, "userData"), userData);
                 console.log("User info saved:", userData);
 
-                // Prepare ratings data
                 const ratingsData = {
                     userID: this.userID,
                     ratings: this.ratings,
                     additionalComment: this.additionalComment
                 };
 
-                // Save ratings in a separate collection
                 await addDoc(collection(db, "item-validation"), ratingsData);
                 console.log("Ratings successfully saved:", ratingsData);
 

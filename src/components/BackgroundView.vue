@@ -8,42 +8,27 @@
                 <span class="dark:text-white"> <b>Which gender do you identify with?</b></span>
             </p>
 
-            <div class="mt-1 mb-3 ml-5 flex items-center space-x-2">
-                <svg xmlns="http://www.w3.org/2000/svg" style="width: 12px; height: 12px;" fill="currentColor"
-                    class="bi bi-info-circle dark:text-white" viewBox="0 0 16 16">
-                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
-                    <path
-                        d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
-                </svg>
-                <p class="text-sm dark:text-white"><i>Choose one of the following answers.</i></p>
-            </div>
-
             <div>
                 <label class="flex items-center dark:text-white mt-2">
                     <input type="radio" name="choice" value="woman" class="mr-2 ">
-                    Woman (including trans woman)
+                    Woman
                 </label>
                 <label class="flex items-center dark:text-white mt-2">
                     <input type="radio" name="choice" value="man" class="mr-2 ">
-                    Man (including trans man)
+                    Man
                 </label>
                 <label class="flex items-center dark:text-white mt-2">
-                    <input type="radio" name="choice" value="non-binary" class="mr-2 ">
-                    Non-binary/gender diverse
+                    <input type="radio" name="choice" value="diverse" class="mr-2 ">
+                    Diverse
+                </label>
+                <label class="flex items-center dark:text-white mt-2">
+                    <input type="radio" name="choice" value="wo-gender-entry" class="mr-2">
+                    Without gender entry
                 </label>
                 <label class="flex items-center dark:text-white mt-2">
                     <input type="radio" name="choice" value="prefer-no-answer" class="mr-2">
-                    Prefer not to answer
-                </label>
-                <div class="flex items-center space-x-4 dark:text-white">
-                    <label class="flex items-center">
-                        <input type="radio" name="choice" value="other" class="mr-2 ">
-                        Prefer to self-describe:
-                    </label>
-                    <input v-model="otherGender" type="text" id="name"
-                        class="dark:text-black bg-gray-50 dark:bg-slate-200 border border-gray-300 dark:placeholder-gray-600 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-25 h-9 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        required />
-                </div> <br>
+                    I prefer not to answer
+                </label><br>
 
 
                 <div>

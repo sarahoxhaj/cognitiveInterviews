@@ -24,20 +24,20 @@
             <!-- option 1 -->
             <div v-if="showOption1">
                 <div class="flex justify-center space-x-4 px-16 mt-6">
-                    <img @click="openImage(require('@/assets/2.4.png'))" src="@/assets/2.4.png" alt="Image 1"
-                        class="w-[15rem] h-[11rem]">
-                    <img @click="openImage(require('@/assets/2.3.png'))" src="@/assets/2.3.png" alt="Image 2"
-                        class="w-[14rem] h-[11rem]">
-                    <img @click="openImage(require('@/assets/2.7.png'))" src="@/assets/2.7.png" alt="Image 3"
-                        class="w-[15rem] h-[11rem]">
+                    <img @click="openImage(require('@/assets/bar.png'))" src="@/assets/bar.png" alt="Image 1"
+                        class="w-[15rem] h-[10rem] mt-2">
+                    <img @click="openImage(require('@/assets/map.png'))" src="@/assets/map.png" alt="Image 2"
+                        class="w-[16rem] h-[11rem]">
+                    <img @click="openImage(require('@/assets/line.png'))" src="@/assets/line.png" alt="Image 3"
+                        class="w-[17rem] h-[9rem] mt-4">
                 </div> <br>
                 <div class="flex justify-center space-x-4 px-16 mb-10">
-                    <img @click="openImage(require('@/assets/2.11.png'))" src="@/assets/2.11.png" alt="Image 4"
+                    <img @click="openImage(require('@/assets/spider.png'))" src="@/assets/spider.png" alt="Image 4"
                         class="w-[15rem] h-[11rem]">
                     <img @click="openImage(require('@/assets/1.1.png'))" src="@/assets/1.1.png" alt="Image 5"
-                        class="w-[15rem] h-[12rem]">
-                    <img @click="openImage(require('@/assets/1.2.png'))" src="@/assets/1.2.png" alt="Image 6"
                         class="w-[16rem] h-[12rem]">
+                    <img @click="openImage(require('@/assets/scatterPlot.png'))" src="@/assets/scatterPlot.png" alt="Image 6"
+                        class="w-[18rem] h-[10rem] mt-3">
                 </div>
             </div>
 
@@ -46,9 +46,9 @@
                 <div class="flex justify-center space-x-4 px-16 mt-6">
                     <img @click="openImage(require('@/assets/2.1.png'))" src="@/assets/2.1.png" alt="Image 1"
                         class="w-[14rem] h-[11rem]">
-                    <img @click="openImage(require('@/assets/2.10.png'))" src="@/assets/2.10.png" alt="Image 3"
+                    <img @click="openImage(require('@/assets/map.png'))" src="@/assets/map.png" alt="Image 3"
                         class="w-[15rem] h-[11rem]">
-                    <img @click="openImage(require('@/assets/2.2.png'))" src="@/assets/2.2.png" alt="Image 2"
+                    <img @click="openImage(require('@/assets/map.png'))" src="@/assets/map.png" alt="Image 2"
                         class="w-[14rem] h-[11rem]">
                 </div> <br>
                 <div class="flex justify-center space-x-4 px-16 mb-10 ml-8">

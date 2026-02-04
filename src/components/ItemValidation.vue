@@ -264,7 +264,8 @@ export default {
                 await addDoc(collection(db, "item-validation"), ratingsData);
                 console.log("Ratings successfully saved:", ratingsData);
 
-                this.$router.push('/LastView');
+                //this.$router.push('/LastView');
+                this.$router.replace({ name: 'LastView' });
 
             } catch (error) {
                 console.error("Error saving data:", error);

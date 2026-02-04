@@ -105,7 +105,8 @@ export default {
         goToBackgroundView() {
             const selectedChoice = document.querySelector('input[name="choice"]:checked');
             if (selectedChoice && selectedChoice.value === "yes") {
-                this.$router.push('/BackgroundView');
+                // this.$router.push('/BackgroundView');
+                this.$router.replace({ name: 'BackgroundView' });
                 this.$nextTick(() => window.scrollTo(0, 0));
             } else {
                 alert('You cannot proceed if you do not click "Yes".');

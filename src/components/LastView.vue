@@ -67,7 +67,8 @@ export default {
     name: 'LastView',
     methods: {
         goToLastViewThanks() {
-            this.$router.push('/LastViewThanks');
+            //this.$router.push('/LastViewThanks');
+            this.$router.replace({ name: 'LastViewThanks' });
         }
     }
 }

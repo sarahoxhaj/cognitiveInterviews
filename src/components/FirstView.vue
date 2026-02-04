@@ -73,7 +73,8 @@ export default {
     name: 'FirstView',
     methods: {
         goToConsentForm() {
-            this.$router.push('/ConsentForm');
+            // this.$router.push('/ConsentForm');
+            this.$router.replace({ name: 'ConsentForm' });
             this.$nextTick(() => window.scrollTo(0, 0));
         }
     }

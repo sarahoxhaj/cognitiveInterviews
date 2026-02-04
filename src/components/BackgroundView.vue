@@ -130,7 +130,8 @@ export default {
 
             console.log("Data successfully saved in session")
 
-            this.$router.push('/ItemValidation');
+            //this.$router.push('/ItemValidation');
+            this.$router.replace({ name: 'ItemValidation' });
         }
     }
 }

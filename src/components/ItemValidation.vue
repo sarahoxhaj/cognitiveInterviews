@@ -171,10 +171,11 @@
                 required></textarea>
 
             <div class="flex justify-end mt-10">
-                <button @click.prevent="saveDataToFirebase" type="submit"
-                    class="bg-sky-900 hover:bg-sky-800 text-white px-4 py-2 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                <button @click.prevent="saveDataToFirebase" :disabled="isSubmitting"
+                    class="bg-sky-900 hover:bg-sky-800 disabled:opacity-50 disabled:cursor-not-allowed text-white px-4 py-2 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm w-full sm:w-auto text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                     Save
                 </button>
+
             </div>
 
         </div>
@@ -195,6 +196,7 @@ export default {
             ratings: {},
             additionalComment: "",
             showOption1: true,
+            isSubmitting: false,
             currentPage: 1,
             rowsPerPage: 10, // sentences per page
             questions: [
@@ -237,12 +239,13 @@ export default {
         async saveDataToFirebase() {
             // all questions answered
             const allAnswered = this.questions.every(q => this.ratings[q.id] !== undefined);
-
             if (!allAnswered) {
                 alert("Please answer all statements before continuing.");
-                return;
+                return; // exit early without disabling button
             }
 
+            if (this.isSubmitting) return; // prevent double clicks
+            this.isSubmitting = true;
 
             try {
                 const userData = {
@@ -253,7 +256,6 @@ export default {
                 };
 
                 await addDoc(collection(db, "userData"), userData);
-                console.log("User info saved:", userData);
 
                 const ratingsData = {
                     userID: this.userID,
@@ -262,16 +264,16 @@ export default {
                 };
 
                 await addDoc(collection(db, "item-validation"), ratingsData);
-                console.log("Ratings successfully saved:", ratingsData);
 
-                //this.$router.push('/LastView');
                 this.$router.replace({ name: 'LastView' });
 
             } catch (error) {
                 console.error("Error saving data:", error);
                 alert("There was an error saving your data. Please try again.");
+                this.isSubmitting = false; // re-enable button if error occurs
             }
         }
+
     }
 }
 </script>

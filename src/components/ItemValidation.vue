@@ -89,9 +89,8 @@
                 <table class="w-full text-sm text-left rtl:text-right text-body">
                     <thead class="text-sm text-body bg-neutral-secondary-soft border-b rounded-base border-default">
                         <tr>
-                            <!-- <th class="w-1/6 -px-6 py-2 font-medium"></th> -->
                             <th class="px-2 py-1 font-medium text-center font-medium"></th>
-                            
+
 
                             <th class="px-2 py-1 font-medium text-center">
                                 <div class="flex flex-col items-center">
@@ -130,395 +129,39 @@
                         </tr>
 
                     </thead>
-                    <tbody class>
-                        <tr class="bg-neutral-primary border-b border-default">
+
+                    <tbody>
+                        <tr v-for="question in paginatedQuestions" :key="question.id"
+                            class="bg-neutral-primary border-b border-default">
                             <th scope="row"
                                 class="px-6 py-4 font-medium text-heading whitespace-nowrap text-right align-middle">
-                                I find the amount of visual elements distracting.
+                                {{ question.text }}
                             </th>
 
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q1" type="radio" name="q1" value="1" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q1" type="radio" name="q1" value="2" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q1" type="radio" name="q1" value="3" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q1" type="radio" name="q1" value="4" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q1" type="radio" name="q1" value="5" required
-                                    class="w-6 h-6 mx-auto block">
+                            <td v-for="value in 5" :key="value" class="px-6 py-4 align-middle text-center">
+                                <input v-model="ratings[question.id]" type="radio" :name="question.id" :value="value"
+                                    required class="w-6 h-6 mx-auto block scale-110">
                             </td>
                         </tr>
-
-                        <tr class="bg-neutral-primary border-b border-default">
-                            <th scope="row"
-                                class="px-6 py-4 font-medium text-heading whitespace-nowrap text-right align-middle">
-                                I find the visualization occludes information.
-                            </th>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q2" type="radio" name="q2" value="1" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q2" type="radio" name="q2" value="2" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q2" type="radio" name="q2" value="3" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q2" type="radio" name="q2" value="4" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q2" type="radio" name="q2" value="5" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-                        </tr>
-
-                        <tr class="bg-neutral-primary border-b border-default">
-                            <th scope="row"
-                                class="px-6 py-4 font-medium text-heading whitespace-nowrap text-right align-middle">
-                                I find the visualization cluttered. 
-                            </th>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q3" type="radio" name="q3" value="1" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q3" type="radio" name="q3" value="2" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q3" type="radio" name="q3" value="3" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q3" type="radio" name="q3" value="4" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q3" type="radio" name="q3" value="5" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-                        </tr> 
-
-                        <tr class="bg-neutral-primary border-b border-default">
-                            <th scope="row"
-                                class="px-6 py-4 font-medium text-heading whitespace-nowrap text-right align-middle">
-                                I find this visualization familiar.
-                            </th>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q4" type="radio" name="q4" value="1" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q4" type="radio" name="q4" value="2" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q4" type="radio" name="q4" value="3" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q4" type="radio" name="q4" value="4" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q4" type="radio" name="q4" value="5" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-                        </tr> 
-
-                        <tr class="bg-neutral-primary border-b border-default">
-                            <th scope="row"
-                                class="px-6 py-4 font-medium text-heading whitespace-nowrap text-right align-middle">
-                                I find this visualization easy to understand.
-                            </th>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q5" type="radio" name="q5" value="1" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q5" type="radio" name="q5" value="2" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q5" type="radio" name="q5" value="3" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q5" type="radio" name="q5" value="4" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q5" type="radio" name="q5" value="5" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-                        </tr> 
-
-                        <tr class="bg-neutral-primary border-b border-default">
-                            <th scope="row"
-                                class="px-6 py-4 font-medium text-heading whitespace-nowrap text-right align-middle">
-                                I find this visualization easy to interpret.
-                            </th>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q6" type="radio" name="q6" value="1" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q6" type="radio" name="q6" value="2" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q6" type="radio" name="q6" value="3" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q6" type="radio" name="q6" value="4" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q6" type="radio" name="q6" value="5" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-                        </tr> 
-
-                        <tr class="bg-neutral-primary border-b border-default">
-                            <th scope="row"
-                                class="px-6 py-4 font-medium text-heading whitespace-nowrap text-right align-middle">
-                                I find this visualization clear.
-                            </th>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q7" type="radio" name="q7" value="1" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q7" type="radio" name="q7" value="2" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q7" type="radio" name="q7" value="3" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q7" type="radio" name="q7" value="4" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q7" type="radio" name="q7" value="5" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-                        </tr> 
-
-                        <tr class="bg-neutral-primary border-b border-default">
-                            <th scope="row"
-                                class="px-6 py-4 font-medium text-heading whitespace-nowrap text-right align-middle">
-                                I feel confident about this visualization.
-                            </th>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q8" type="radio" name="q8" value="1" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q8" type="radio" name="q8" value="2" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q8" type="radio" name="q8" value="3" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q8" type="radio" name="q8" value="4" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q8" type="radio" name="q8" value="5" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-                        </tr> 
-
-                        <tr class="bg-neutral-primary border-b border-default">
-                            <th scope="row"
-                                class="px-6 py-4 font-medium text-heading whitespace-nowrap text-right align-middle">
-                                I find this visualization difficult to read.
-                            </th>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q9" type="radio" name="q9" value="1" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q9" type="radio" name="q9" value="2" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q9" type="radio" name="q9" value="3" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q9" type="radio" name="q9" value="4" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q9" type="radio" name="q9" value="5" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-                        </tr> 
-
-                        <tr class="bg-neutral-primary border-b border-default">
-                            <th scope="row"
-                                class="px-6 py-4 font-medium text-heading whitespace-nowrap text-right align-middle">
-                                I feel confused by the visualization.
-                            </th>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q10" type="radio" name="q10" value="1" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q10" type="radio" name="q10" value="2" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q10" type="radio" name="q10" value="3" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q10" type="radio" name="q10" value="4" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q10" type="radio" name="q10" value="5" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-                        </tr> 
-
-                        <tr class="bg-neutral-primary border-b border-default">
-                            <th scope="row"
-                                class="px-6 py-4 font-medium text-heading whitespace-nowrap text-right align-middle">
-                                I feel overwhelmed by the visualization.
-                            </th>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q11" type="radio" name="q11" value="1" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q11" type="radio" name="q11" value="2" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q11" type="radio" name="q11" value="3" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q11" type="radio" name="q11" value="4" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q11" type="radio" name="q11" value="5" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-                        </tr> 
-
-                        <tr class="bg-neutral-primary border-b border-default">
-                            <th scope="row"
-                                class="px-6 py-4 font-medium text-heading whitespace-nowrap text-right align-middle">
-                                I feel curious about this visualization.
-                            </th>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q12" type="radio" name="q12" value="1" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q12" type="radio" name="q12" value="2" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q12" type="radio" name="q12" value="3" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q12" type="radio" name="q12" value="4" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-
-                            <td class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings.q12" type="radio" name="q12" value="5" required
-                                    class="w-6 h-6 mx-auto block">
-                            </td>
-                        </tr> 
-
-
-
                     </tbody>
+
+
+
                 </table>
+
+                <div class="flex justify-center mt-2 space-x-2 mb-2">
+                    <button @click="currentPage--" :disabled="currentPage === 1"
+                        class="dark:border-white px-3 py-1 border rounded disabled:opacity-50 border-sky-800 font-semibold transition-colors duration-200 text-gray-700 hover:text-white hover:bg-sky-800 dark:text-white dark:hover:text-white dark:hover:bg-sky-800">Prev</button>
+
+                    <button v-for="page in totalPages" :key="page" @click="currentPage = page" :class="['dark:border-white px-3 py-1 border border-sky-800 rounded font-semibold transition-colors duration-200 text-gray-700 hover:text-white hover:bg-sky-800 dark:text-white dark:hover:text-white dark:hover:bg-sky-800', currentPage === page
+                        ? 'bg-sky-800 text-white'
+                        : 'text-gray-700 dark:text-white']">
+                        {{ page }} </button>
+
+                    <button @click="currentPage++" :disabled="currentPage === totalPages"
+                        class="px-3 py-1 border rounded disabled:opacity-50 border-sky-800 dark:border-white font-semibold transition-colors duration-200 text-gray-700 hover:text-white hover:bg-sky-800 dark:text-white dark:hover:text-white dark:hover:bg-sky-800">Next</button>
+                </div>
+
 
             </div>
 
@@ -549,19 +192,38 @@ export default {
     data() {
         return {
             userID: null,
-            ratings: {
-                q1: null,
-                q2: null,
-                q3: null,
-                q4: null,
-                q5: null,
-                q6: null,
-                q7: null
-            },
+            ratings: {},
             additionalComment: "",
-            showOption1: true
+            showOption1: true,
+            currentPage: 1,
+            rowsPerPage: 10, // sentences per page
+            questions: [
+                { id: 'q1', text: 'I find the amount of visual elements distracting.' },
+                { id: 'q2', text: 'I find the visualization occludes information.' },
+                { id: 'q3', text: 'I find the visualization cluttered.' },
+                { id: 'q4', text: 'I find this visualization familiar.' },
+                { id: 'q5', text: 'I find this visualization easy to understand.' },
+                { id: 'q6', text: 'I find this visualization easy to interpret.' },
+                { id: 'q7', text: 'I find this visualization clear.' },
+                { id: 'q8', text: 'I feel confident about this visualization.' },
+                { id: 'q9', text: 'I find this visualization difficult to read.' },
+                { id: 'q10', text: 'I feel confused by the visualization.' },
+                { id: 'q11', text: 'I feel overwhelmed by the visualization.' },
+                { id: 'q12', text: 'I feel curious about this visualization.' },
+            ],
         };
     },
+    computed: {
+        totalPages() {
+            return Math.ceil(this.questions.length / this.rowsPerPage);
+        },
+        paginatedQuestions() {
+            const start = (this.currentPage - 1) * this.rowsPerPage;
+            const end = start + this.rowsPerPage;
+            return this.questions.slice(start, end);
+        }
+    },
+
 
     mounted() {
         this.userID = sessionStorage.getItem("userID");
@@ -573,12 +235,14 @@ export default {
     },
     methods: {
         async saveDataToFirebase() {
-            for (const [, value] of Object.entries(this.ratings)) {
-                if (value === null) {
-                    alert("Please answer all statements before continuing.");
-                    return;
-                }
+            // all questions answered
+            const allAnswered = this.questions.every(q => this.ratings[q.id] !== undefined);
+
+            if (!allAnswered) {
+                alert("Please answer all statements before continuing.");
+                return;
             }
+
 
             try {
                 const userData = {

@@ -40,15 +40,16 @@
         <p class="mt-10 dark:text-white">
             Please respond to this survey only if you:<br>
         </p>
-        <div class="mt-2 dark:text-white">
+        <div class="mt-2 dark:text-white max-w-xl mx-auto text-left">
             • are a fluent speaker of English <br>
             • are of legal age (18 years in most countries), and <br>
             • consider yourself an expert on the topic of visualization.
         </div>
+
         <p class="mt-7 dark:text-white">
             This study is conducted by:<br>
         </p>
-        <div class="mt-2 dark:text-white">
+        <div class="mt-2 dark:text-white max-w-xl mx-auto text-left">
             • <a href="mailto:a12242040@unet.univie.ac.at" class="hover:text-blue-500">Sara Hoxhaj (University of
                 Vienna)</a><br>
             • <a href="mailto:torsten.moeller@univie.ac.at" class="hover:text-blue-500">Torsten Möller (University of

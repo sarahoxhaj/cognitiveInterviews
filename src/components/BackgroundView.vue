@@ -39,7 +39,7 @@
 
                     <select v-model="age" id="age" required
                         class="ml-6 dark:bg-slate-200 bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-80 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                        <option value="" disabled class="dark:text-zinc-400">--age group--</option>
+                        <option value="" disabled class="dark:text-zinc-400">age group</option>
                         <option value="18-24" class="dark:text-zinc-400">18-24</option>
                         <option value="25-34" class="dark:text-zinc-400">25-34</option>
                         <option value="35-44" class="dark:text-zinc-400">35-44</option>

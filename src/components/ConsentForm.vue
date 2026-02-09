@@ -7,44 +7,44 @@
             <p>You are invited to participate in a study titled "A Validated Scale for Visual Complexity in
                 Visualization". The
                 purpose of this research study is to develop a validated scale for measuring the visual complexity of
-                data visualization. This study is conducted by:</p>
-            <p>• Sara Hoxhaj (University of Vienna)<br></p>
-            <p>• Torsten Möller (University of Vienna)<br></p>
-            <p>• Laura Koesten (University of Vienna)<br></p>
-            <p>• Petra Isenberg (University of Paris-Saclay)<br></p>
-            <p>• Tobias Isenberg (University of Paris-Saclay)<br></p>
-            <p>• Anne-Flore Cabouat (University of Paris-Saclay)<br></p> <br>
-            <p><b>Who can participate?</b></p>
+                data visualization. This study is conducted by:</p> 
+            <p class="pl-6 mt-2">• Sara Hoxhaj (University of Vienna)<br></p>
+            <p class="pl-6">• Torsten Möller (University of Vienna)<br></p>
+            <p class="pl-6">• Laura Koesten (University of Vienna)<br></p>
+            <p class="pl-6">• Petra Isenberg (University of Paris-Saclay)<br></p>
+            <p class="pl-6">• Tobias Isenberg (University of Paris-Saclay)<br></p>
+            <p class="pl-6">• Anne-Flore Cabouat (University of Paris-Saclay)<br></p>
+            <p class="mt-2"><b>Who can participate?</b></p>
             <p>Anyone ...</p>
-            <p>• who is a fluent speaker of English</p>
-            <p>• is of legal age (18 years in most countries), and</p>
-            <p>• considers himself/herself an expert on the topic of visualization</p><br>
-            <p><b>What is involved in the study?</b></p>
+            <p class="pl-6">• who is a fluent speaker of English</p>
+            <p class="pl-6">• is of legal age (18 years in most countries), and</p>
+            <p class="pl-6">• considers himself/herself an expert on the topic of visualization</p>
+            <p class="mt-2"><b>What is involved in the study?</b></p>
             <p>Completing this survey takes approximately 10 minutes. Participants will answer questions related to
                 evaluating the visual complexity of data visualizations. Participation
-                requires completing a background questionnaire that follows this consent form.</p><br>
-            <p><b>Voluntariness of participation</b></p>
+                requires completing a background questionnaire that follows this consent form.</p>
+            <p class="mt-2"><b>Voluntariness of participation</b></p>
             <p>Participation is voluntary. Participants can stop the study at any time without giving a reason and their
                 data will not be included in our analysis. Withdrawal of participation in the research project will be
-                without consequences of any kind.</p><br>
-            <p><b>Anonymity and Confidentiality</b></p>
+                without consequences of any kind.</p>
+            <p class="mt-2"><b>Anonymity and Confidentiality</b></p>
             <p>This study is anonymous - we do not require participants to provide any information that could identify
                 them in the consent form nor in the questionnaire. This means that we will not be able to withdraw
                 personal data
-                from the analyses as soon as participant have submitted their answers.</p><br>
-            <p><b>Risks/Discomforts</b></p>
+                from the analyses as soon as participant have submitted their answers.</p>
+            <p class="mt-2"><b>Risks/Discomforts</b></p>
             <p>We believe there are no known risks associated with this research study; however, as with any online
                 related activity, the risk of a breach is always possible. We will minimize any risk by requiring no
                 personally identifiable information such as names, addresses, phone numbers, or email addresses and
                 storing the raw data on password-protected computers. This study will be published in an academic paper
                 or a thesis.
-                The anonymized responses will then be made publicly available.</p><br>
-            <p><b>Compensation</b></p>
-            <p>Participants will receive no compensation for their participation.</p><br>
-            <p><b>Contact details</b></p>
+                The anonymized responses will then be made publicly available.</p>
+            <p class="mt-2"><b>Compensation</b></p>
+            <p>Participants will receive no compensation for their participation.</p>
+            <p class="mt-2"><b>Contact details</b></p>
             <p>Please feel free to contact one of the six researchers below if you wish to know more about the study,
-                or if you have any questions:</p><br>
-            <div class="flex justify-between w-full">
+                or if you have any questions:</p>
+            <div class="flex justify-between w-full mt-2">
                 <div>
                     <p><b>Sara Hoxhaj</b></p> <a href="mailto:a12242040@unet.univie.ac.at"
                         class="font-medium text-blue-600 dark:text-amber-300 hover:underline">a12242040@unet.univie.ac.at</a>

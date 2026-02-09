@@ -94,7 +94,7 @@
 
                             <th class="px-2 py-1 font-medium text-center">
                                 <div class="flex flex-col items-center">
-                                    <span class="h-5">Not Relevant</span>
+                                    <span class="h-5">not at all relevant</span>
                                     <span class="text-[15px]">1</span>
                                 </div>
                             </th>
@@ -122,7 +122,7 @@
 
                             <th class="px-2 py-1 font-medium text-center">
                                 <div class="flex flex-col items-center">
-                                    <span class="h-5">Very Relevant</span>
+                                    <span class="h-5">very relevant</span>
                                     <span class="text-[15px]">5</span>
                                 </div>
                             </th>

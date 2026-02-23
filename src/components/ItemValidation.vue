@@ -77,7 +77,7 @@
                 single, static data visualization — <b>focusing only on its visual appearance</b>.</p><br>
             <p>Please also keep in mind that the statements should remain applicable for a great variety of data
                 visualizations and easy to understand for non expert participants.</p>
-            <p>Finally, note that the purpose of this survey is not <b>not</b> to select the final statements of the
+            <p>Finally, note that the purpose of this survey is <b>not</b> to select the final statements of the
                 scale: we seek to assess the individual relevancy of each statement, so redundancy within the list is
                 intentional at this stage.</p><br><br>
             <p>How relevant do you think the following terms are for describing the <b>perceived visual complexity of a
@@ -167,8 +167,9 @@
 
             <p class="mt-12">If you have any comments or suggestions related to this survey, please write them here.</p>
             <textarea v-model="additionalComment" id="additionalComment" rows="4"
-                class="dark:text-black mt-4 rounded-lg px-0 w-full border border-gray-300 focus:ring-0 focus:outline-none dark:placeholder-gray-400 bg-gray-50"
+                class="dark:text-black mt-4 rounded-lg px-0 w-full border-[1.5px] border-gray-400 focus:ring-0 focus:outline-none dark:placeholder-gray-400 bg-gray-50"
                 required></textarea>
+                
 
             <div class="flex justify-end mt-10">
                 <button @click.prevent="saveDataToFirebase" :disabled="isSubmitting"

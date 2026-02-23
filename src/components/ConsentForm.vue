@@ -3,7 +3,7 @@
     <div class="bg-gray-50 dark:bg-slate-600 flex flex-col min-h-screen">
         <p class="mb-2 text-2xl tracking-tight text-gray-900 dark:text-white mt-7 text-center">Consent form</p>
         <div class="text-left px-24 dark:text-white">
-            <p><b>Introduction</b></p>
+            <!-- <p><b>Introduction</b></p>
             <p>You are invited to participate in a study titled "A Validated Scale for Visual Complexity in
                 Visualization". The
                 purpose of this research study is to develop a validated scale for measuring the visual complexity of
@@ -13,32 +13,28 @@
             <p class="pl-6">• Laura Koesten (University of Vienna)<br></p>
             <p class="pl-6">• Petra Isenberg (University of Paris-Saclay)<br></p>
             <p class="pl-6">• Tobias Isenberg (University of Paris-Saclay)<br></p>
-            <p class="pl-6">• Anne-Flore Cabouat (University of Paris-Saclay)<br></p>
-            <p class="mt-2"><b>Who can participate?</b></p>
+            <p class="pl-6">• Anne-Flore Cabouat (University of Paris-Saclay)<br></p> -->
+            <!-- <p class="mt-2"><b>Who can participate?</b></p>
             <p>Anyone ...</p>
-            <p class="pl-6">• who is a fluent speaker of English</p>
-            <p class="pl-6">• is of legal age (18 years in most countries), and</p>
-            <p class="pl-6">• considers himself/herself an expert on the topic of visualization</p>
-            <p class="mt-2"><b>What is involved in the study?</b></p>
-            <p>Completing this survey takes approximately 10 minutes. Participants will answer questions related to
-                evaluating the visual complexity of data visualizations. Participation
-                requires completing a background questionnaire that follows this consent form.</p>
+            <p class="pl-6">• who is fluent in English</p>
+            <p class="pl-6">• is 18 years or older, and</p>
+            <p class="pl-6">• considers himself/herself an expert on the topic of visualization</p> -->
+            <p class="mt-2"><b>What Participation Involves</b></p>
+            <p>Completing this survey will take approximately 10 minutes. You will be asked to rate different statements
+                based on how relevant you consider them for assessing the perceived visual complexity of a
+                visualization. The survey also includes a brief background questionnaire.</p>
             <p class="mt-2"><b>Voluntariness of participation</b></p>
-            <p>Participation is voluntary. Participants can stop the study at any time without giving a reason and their
-                data will not be included in our analysis. Withdrawal of participation in the research project will be
-                without consequences of any kind.</p>
+            <p>Participation is voluntary. You may stop participating at any time without giving a reason. If you
+                withdraw, your data will not be included in the analysis, and there will be no consequences.</p>
             <p class="mt-2"><b>Anonymity and Confidentiality</b></p>
             <p>This study is anonymous - we do not require participants to provide any information that could identify
                 them in the consent form nor in the questionnaire. This means that we will not be able to withdraw
-                personal data
-                from the analyses as soon as participant have submitted their answers.</p>
+                personal data from the analyses as soon as participant have submitted their answers.</p>
             <p class="mt-2"><b>Risks/Discomforts</b></p>
-            <p>We believe there are no known risks associated with this research study; however, as with any online
-                related activity, the risk of a breach is always possible. We will minimize any risk by requiring no
-                personally identifiable information such as names, addresses, phone numbers, or email addresses and
-                storing the raw data on password-protected computers. This study will be published in an academic paper
-                or a thesis.
-                The anonymized responses will then be made publicly available.</p>
+            <p>This research study involves minimal risk. The main risk is the small possibility of a data breach, which
+                we minimize by not collecting any personal identifying information and storing data securely on
+                password-protected computers. Study results will be published in an academic paper or thesis, and
+                anonymized responses may be shared publicly.</p>
             <p class="mt-2"><b>Compensation</b></p>
             <p>Participants will receive no compensation for their participation.</p>
             <p class="mt-2"><b>Contact details</b></p>

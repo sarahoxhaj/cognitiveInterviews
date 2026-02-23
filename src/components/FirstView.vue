@@ -27,22 +27,18 @@
     </div> -->
 
     <div class="bg-gray-50 dark:bg-slate-600 flex flex-col items-center justify-start min-h-screen">
-        <p class="mb-2 text-2xl tracking-tight text-gray-900 dark:text-white mt-7">Visual complexity of data
-            visualizations -
-            item validation</p>
-        <p class="mt-5 px-80 dark:text-white">
-            You are invited to participate in our study titled "A Validated Scale for Visual Complexity in
+        <p class="mb-2 text-2xl tracking-tight text-gray-900 dark:text-white mt-14">Visual Complexity in Data Visualizations: Item Evaluation Study</p>
+        <p class="mt-5 max-w-5xl text-center dark:text-white">
+            You are invited to participate in our study that contributes to the project "A Validated Scale for Visual Complexity in
             Visualization". <br>
             Our goal is to develop a validated scale that researchers can use to let study participants rate the visual
             complexity of a visualization. </p>
-        <div class="flex space-x-4 px-52 mt-2">
-        </div>
-        <p class="mt-10 dark:text-white">
+        <p class="mt-5 dark:text-white">
             Please respond to this survey only if you:<br>
         </p>
         <div class="mt-2 dark:text-white max-w-xl mx-auto text-left">
-            • are a fluent speaker of English <br>
-            • are of legal age (18 years in most countries), and <br>
+            • are fluent in English <br>
+            • are 18 years or older, and <br>
             • consider yourself an expert on the topic of visualization.
         </div>
 

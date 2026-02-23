@@ -10,12 +10,12 @@
 
             <div>
                 <label class="flex items-center dark:text-white mt-2">
-                    <input type="radio" name="choice" value="woman" class="mr-2 ">
-                    Woman
+                    <input type="radio" name="choice" value="female" class="mr-2 ">
+                    Female
                 </label>
                 <label class="flex items-center dark:text-white mt-2">
-                    <input type="radio" name="choice" value="man" class="mr-2 ">
-                    Man
+                    <input type="radio" name="choice" value="male" class="mr-2 ">
+                    Male
                 </label>
                 <label class="flex items-center dark:text-white mt-2">
                     <input type="radio" name="choice" value="diverse" class="mr-2 ">
@@ -34,7 +34,7 @@
                 <div>
                     <p>
                         <span class="text-red-500 text-2xl">* </span>
-                        <span class="dark:text-white"> <b>What is your age?</b></span>
+                        <span class="dark:text-white"> <b>What is your age group?</b></span>
                     </p>
 
                     <select v-model="age" id="age" required
@@ -45,6 +45,7 @@
                         <option value="35-44" class="dark:text-zinc-400">35-44</option>
                         <option value="45-54" class="dark:text-zinc-400">45-54</option>
                         <option value="54-64" class="dark:text-zinc-400">54-64</option>
+                        <option value="older" class="dark:text-zinc-400">65+</option>
                     </select>
                 </div>
 

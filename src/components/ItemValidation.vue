@@ -200,7 +200,6 @@ export default {
             currentPage: 1,
             rowsPerPage: 10, // sentences per page
             questions: [
-                [
                     { id: 'q1', text: 'I find many visual elements <strong>distracting</strong>.' },
                     { id: 'q2', text: 'I find the visualization <strong>occludes information</strong>.' },
                     { id: 'q3', text: 'I find the visualization <strong>cluttered</strong>.' },
@@ -249,7 +248,6 @@ export default {
                     { id: 'q46', text: 'I find the visualization is <strong>poorly designed</strong>.' },
                     { id: 'q47', text: 'I find the visualization has a <strong>complex visual appearance</strong>.' },
                     { id: 'q48', text: 'I find additional graphics would help in <strong>communication</strong>.' }
-                ]
             ],
         };
     },

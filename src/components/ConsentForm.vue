@@ -20,9 +20,12 @@
             <p class="pl-6">• is 18 years or older, and</p>
             <p class="pl-6">• considers himself/herself an expert on the topic of visualization</p> -->
             <p class="mt-2"><b>What Participation Involves</b></p>
-            <p>Completing this survey will take approximately 10 minutes. You will be asked to rate different statements
-                based on how relevant you consider them for assessing the perceived visual complexity of a
-                visualization. The survey also includes a brief background questionnaire.</p>
+            <p>Completing this survey will take approximately 10 minutes. You will be asked to rate statements based on
+                how relevant you consider them for assessing the perceived visual complexity of a visualization. The
+                statements are presented in a five-page table, with response options ranging from “not at all relevant”
+                to “very relevant.” The survey also includes a brief background questionnaire.</p>
+            <p>For best experience, please complete this survey on a laptop or desktop computer (not on a phone or
+                tablet).</p>
             <p class="mt-2"><b>Voluntariness of participation</b></p>
             <p>Participation is voluntary. You may stop participating at any time without giving a reason. If you
                 withdraw, your data will not be included in the analysis, and there will be no consequences.</p>

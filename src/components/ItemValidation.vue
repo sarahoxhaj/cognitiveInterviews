@@ -4,14 +4,32 @@
         <p class="mb-2 text-2xl tracking-tight text-gray-900 dark:text-white mt-7 text-center">Rating the relevance of
             statements to assess perceived visual complexity.</p>
 
-        <div class="text-left px-24 mt-7 dark:text-white">
+        <div class="mt-5">
+            <div class="flex justify-center space-x-4 px-16 mt-2">
+                <img @click="openImage(require('@/assets/bar.png'))" src="@/assets/bar.png" alt="Image 1"
+                    class="w-[15rem] h-[10rem] mt-2">
+                <img @click="openImage(require('@/assets/map.png'))" src="@/assets/map.png" alt="Image 2"
+                    class="w-[16rem] h-[11rem]">
+                <img @click="openImage(require('@/assets/line2.jpeg'))" src="@/assets/line2.jpeg" alt="Image 3"
+                    class="w-[17rem] h-[9rem] mt-4">
+            </div> <br>
+            <div class="flex justify-center space-x-4 px-16 mb-10">
+                <img @click="openImage(require('@/assets/spider.png'))" src="@/assets/spider.png" alt="Image 4"
+                    class="w-[15rem] h-[11rem]">
+                <img @click="openImage(require('@/assets/1.1.png'))" src="@/assets/1.1.png" alt="Image 5"
+                    class="w-[16rem] h-[12rem]">
+                <img @click="openImage(require('@/assets/scatterPlot.png'))" src="@/assets/scatterPlot.png"
+                    alt="Image 6" class="w-[18rem] h-[10rem] mt-3">
+            </div>
+        </div>
+
+
+        <div class="text-left px-24 mt-5 dark:text-white">
             <div>
                 <p> We would like you to rate different statements according to how relevant you consider them for
-                    judging a
-                    study participant's <b>perception of the visual complexity of a visualization.</b> Below are
-                    examples of
-                    visualizations which could be used as stimuli in such a study, but you can think
-                    of other data representations.</p>
+                    judging a participant's <b>perception of the visual complexity of a visualization.</b> Above are
+                    example
+                    visualizations that could serve as a primer for the study.</p>
 
                 <!-- <div class="flex justify-end -mt-5">
                     <button @click.prevent="showOption1 = !showOption1" type="submit"
@@ -41,13 +59,14 @@
                 </div>
             </div> -->
 
-            <p class="mt-5">The table below includes statements generated from a combination of deductive and inductive
-                methods to study the <b>perceived visual complexity of a visualization.</b> Imagine that these terms
-                would
-                later be used
-                in a rating scale that you could give to participants as part of a visualization user study. Please
+            <p class="mt-5">The table below lists statements generated from a combination of deductive and inductive
+                methods. Imagine that participants
+                would use these statements to rate the visual complexity of a visualization. 
+                <br>Please
+                complete all five pages of the
+                table. Please
                 complete all <b>five pages</b> of the table.</p> <br>
-            <p>Please note that the goal is not to assess the overall
+            <p>Please note that the goal is <b>not</b> to assess the overall
                 system’s complexity, but <b>only the static view of a single visualization</b>, not its interactive
                 features.
                 <!-- While the terms <span class="text-red-500 dark:text-amber-300">visual complexity</span> and <span
@@ -58,30 +77,13 @@
             <!-- <p class="text-center mt-4 mx-12"> We are interested in how participants perceive the visual complexity of a
                 single, static data visualization — <b>focusing only on its visual appearance</b>.</p><br> -->
             <p>The statements should remain applicable for a great variety of data
-                visualizations and easy to understand for non expert participants. Finally, please keep in mind that the
+                visualizations and easy to understand for non expert participants. <br> Finally, please keep in mind that the
                 purpose of this survey is <b>not</b> to select the final statements of the
                 scale: we seek to assess the individual relevancy of each statement, so redundancy within the list is
                 intentional at this stage.</p><br><br>
 
             <!-- option 1 -->
-            <div>
-                <div class="flex justify-center space-x-4 px-16 mt-2">
-                    <img @click="openImage(require('@/assets/bar.png'))" src="@/assets/bar.png" alt="Image 1"
-                        class="w-[15rem] h-[10rem] mt-2">
-                    <img @click="openImage(require('@/assets/map.png'))" src="@/assets/map.png" alt="Image 2"
-                        class="w-[16rem] h-[11rem]">
-                    <img @click="openImage(require('@/assets/line2.jpeg'))" src="@/assets/line2.jpeg" alt="Image 3"
-                        class="w-[17rem] h-[9rem] mt-4">
-                </div> <br>
-                <div class="flex justify-center space-x-4 px-16 mb-10">
-                    <img @click="openImage(require('@/assets/spider.png'))" src="@/assets/spider.png" alt="Image 4"
-                        class="w-[15rem] h-[11rem]">
-                    <img @click="openImage(require('@/assets/1.1.png'))" src="@/assets/1.1.png" alt="Image 5"
-                        class="w-[16rem] h-[12rem]">
-                    <img @click="openImage(require('@/assets/scatterPlot.png'))" src="@/assets/scatterPlot.png"
-                        alt="Image 6" class="w-[18rem] h-[10rem] mt-3">
-                </div>
-            </div>
+
 
 
             <p>How relevant do you think the following terms are for describing the <b>perceived visual complexity of a

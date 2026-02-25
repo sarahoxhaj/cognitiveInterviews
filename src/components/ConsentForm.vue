@@ -20,10 +20,13 @@
             <p class="pl-6">• is 18 years or older, and</p>
             <p class="pl-6">• considers himself/herself an expert on the topic of visualization</p> -->
             <p class="mt-2"><b>What Participation Involves</b></p>
-            <p>Completing this survey will take approximately 10 minutes. You will be asked to rate statements based on
-                how relevant you consider them for assessing the perceived visual complexity of a visualization. The
-                statements are presented in a five-page table, with response options ranging from “not at all relevant”
-                to “very relevant.” The survey also includes a brief background questionnaire.</p>
+            <p>Completing this survey will take approximately 10 minutes. Please imagine that you are preparing a user
+                study to evaluate the perceived visual complexity of data visualizations. In this study, participants
+                would use a rating scale to describe how complex they perceive a visualization to be.
+                The following statements are shown in a five-page table, with response options ranging from "not at all
+                relevant" to "very relevant". Your task is to rate how relevant you think each statement is for
+                assessing participants’ perception of a visualization’s visual complexity. The survey also includes a
+                brief background questionnaire.</p>
             <p>For best experience, please complete this survey on a laptop or desktop computer (not on a phone or
                 tablet).</p>
             <p class="mt-2"><b>Voluntariness of participation</b></p>

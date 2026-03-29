@@ -1,9 +1,9 @@
 <template>
 
-    <!-- <div class="bg-gray-50 dark:bg-slate-600 flex flex-col items-center justify-center min-h-screen text-center px-4">
+    <div class="bg-gray-50 dark:bg-slate-600 flex flex-col items-center justify-center min-h-screen text-center px-4">
 
         <p class="mb-6 text-2xl tracking-tight text-gray-900 dark:text-white">
-            Visual complexity of data visualizations - terms collection
+            Visual Complexity in Data Visualizations: Item Evaluation Study
         </p>
 
         <div class="max-w-lg mx-auto border-2 border-blue-200 p-6 rounded-md dark:text-white">
@@ -17,16 +17,16 @@
             <p class="mt-2 dark:text-white">
                 <a href="mailto:torsten.moeller@univie.ac.at" class="hover:text-blue-500">
                     • Torsten Möller (University of Vienna)
-                </a> or <br>
+                </a> &nbsp; or <br>
                 <a href="mailto:a12242040@unet.univie.ac.at" class="hover:text-blue-500">
                     • Sara Hoxhaj (University of Vienna)
                 </a>
             </p>
         </div>
 
-    </div> -->
+    </div>
 
-    <div class="bg-gray-50 dark:bg-slate-600 flex flex-col items-center justify-start min-h-screen">
+    <!-- <div class="bg-gray-50 dark:bg-slate-600 flex flex-col items-center justify-start min-h-screen">
         <p class="mb-2 text-2xl tracking-tight text-gray-900 dark:text-white mt-14">Visual Complexity in Data Visualizations: Item Evaluation Study</p>
         <p class="mt-5 max-w-5xl text-center dark:text-white">
             You are invited to participate in our study that contributes to the project "A Validated Scale for Visual Complexity in
@@ -62,7 +62,8 @@
         <p class="mt-4 dark:text-white">Click <button @click.prevent="goToConsentForm" type="submit"
                 class="ml-2 mr-2 py-2 px-2 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700  dark:text-black dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-400">Next</button>
             if you are interested in further details about the study.</p>
-    </div>
+    </div> -->
+
 </template>
 
 <script>

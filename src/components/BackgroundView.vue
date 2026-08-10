@@ -52,25 +52,22 @@
 
                 <p class="mt-5">
                     <span class="text-red-500 text-2xl">* </span>
-                    <span class="dark:text-white"> <b>For how many years have you worked in or studied the field of
-                            visualization?</b></span>
+                    <span class="dark:text-white"> <b>What is the highest level of education you have
+                            completed?</b></span>
                 </p>
 
-                <div class="mt-1 mb-3 ml-5 flex items-center space-x-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" style="width: 12px; height: 12px;" fill="currentColor"
-                        class="dark:text-white bi bi-info-circle" viewBox="0 0 16 16">
-                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
-                        <path
-                            d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
-                    </svg>
-                    <p class="text-sm dark:text-white"><i>Only numbers can be entered in this field.</i></p>
-                </div>
-
-                <input v-model="years" type="number" id="years"
-                    class="bg-gray-50 dark:bg-slate-200 border border-gray-300 dark:placeholder-gray-600 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-25 h-9 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    min="0" step="1" required />
-
-
+                <select v-model="education" id="education" required
+                    class="ml-6 dark:bg-slate-200 bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-80 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                    <option value="" disabled class="dark:text-zinc-400">level of education</option>
+                    <option value="high-school" class="dark:text-zinc-400">High school diploma or equivalent</option>
+                    <option value="some-college" class="dark:text-zinc-400">Some college, no degree</option>
+                    <option value="bachelor" class="dark:text-zinc-400">Bachelor's or equivalent level</option>
+                    <option value="master" class="dark:text-zinc-400">Master's or equivalent level</option>
+                    <option value="doctoral" class="dark:text-zinc-400">Doctoral or equivalent level (e.g., PhD)
+                    </option>
+                    <option value="other" class="dark:text-zinc-400">Other</option>
+                    <option value="prefer-no" class="dark:text-zinc-400">Prefer not to say</option>
+                </select>
             </div>
 
 
@@ -89,8 +86,8 @@ export default {
     data() {
         return {
             otherGender: '',
-            years: '',
             age: '',
+            education: '',
         };
     },
     methods: {
@@ -109,24 +106,22 @@ export default {
                 gender = this.otherGender;
             }
 
-            const yearsInput = this.years;
+            const education = this.education;
             const ageInput = this.age;
             const userID = Math.floor(10000 + Math.random() * 90000).toString();
-
-
-            if (isNaN(yearsInput) || yearsInput === '') {
-                alert("Please enter a valid number for the second question.");
-                return;
-            }
 
             if (!ageInput) {
                 alert("Please select your age group.");
                 return;
             }
-
+            if (!this.education) {
+                alert("Please select your highest level of education.");
+                return;
+            }
+            
             sessionStorage.setItem("userID", userID);
             sessionStorage.setItem("gender", gender);
-            sessionStorage.setItem("years", yearsInput);
+            sessionStorage.setItem("education", education);
             sessionStorage.setItem("age", ageInput);
 
             console.log("Data successfully saved in session")

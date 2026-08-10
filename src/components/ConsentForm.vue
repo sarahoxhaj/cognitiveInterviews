@@ -20,22 +20,26 @@
             <p class="pl-6">• is 18 years or older, and</p>
             <p class="pl-6">• considers himself/herself an expert on the topic of visualization</p> -->
             <p class="mt-2"><b>What Participation Involves</b></p>
-            <p>Completing this survey will take approximately 10 minutes. Please imagine that you are preparing a user
-                study to evaluate the perceived visual complexity of data visualizations. In this study, participants
-                would use a rating scale to describe how complex they perceive a visualization to be.
-                The following statements are shown in a five-page table, with response options ranging from "not at all
-                relevant" to "very relevant". Your task is to rate how relevant you think each statement is for
-                assessing participants’ perception of a visualization’s visual complexity. The survey also includes a
-                brief background questionnaire.</p>
-            <p>For best experience, please complete this survey on a laptop or desktop computer (not on a phone or
-                tablet).</p>
+            <p>This study is part of a research project evaluating how people perceive the visual complexity of data
+                visualizations. The session is a cognitive interview and will take approximately 30 minutes.<br>
+                Participation involves a think-aloud task, where you will be asked to verbalize your thoughts while
+                rating
+                16 items on a Likert scale evaluating visual complexity. Before the main task, you will complete a
+                short training exercise to get familiar with the think-aloud method. This part is not analyzed as data.
+                The full session (excluding the training task) will be <u>audio and screen-recorded</u> for data
+                collection
+                and quality-review purposes. The survey also includes a brief background questionnaire.
+            </p>
             <p class="mt-2"><b>Voluntariness of participation</b></p>
             <p>Participation is voluntary. You may stop participating at any time without giving a reason. If you
                 withdraw, your data will not be included in the analysis, and there will be no consequences.</p>
             <p class="mt-2"><b>Anonymity and Confidentiality</b></p>
-            <p>This study is anonymous - we do not require participants to provide any information that could identify
-                them in the consent form nor in the questionnaire. This means that we will not be able to withdraw
-                personal data from the analyses as soon as participant have submitted their answers.</p>
+            <p>We do not collect any personal identifying information such as your name or email. However, because the
+                session includes audio and screen recording, your voice (and any content visible on your screen) may be
+                identifiable to the research team. Only the research team will have access to the raw recordings, which
+                will be stored securely on password-protected devices and deleted after the analysis phase is complete.
+                Any results shared publicly will be anonymized and will not include identifiable
+                audio, video, or screen content.</p>
             <p class="mt-2"><b>Risks/Discomforts</b></p>
             <p>This research study involves minimal risk. The main risk is the small possibility of a data breach, which
                 we minimize by not collecting any personal identifying information and storing data securely on

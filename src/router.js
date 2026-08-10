@@ -5,6 +5,7 @@ import ConsentForm  from "./components/ConsentForm.vue";
 import BackgroundView from "./components/BackgroundView"
 import ItemValidation from "./components/ItemValidation.vue"
 import LastView from "./components/LastView.vue"
+import PostQuestionnaire from "./components/PostQuestionnaire.vue";
 
 const routes = [
   {
@@ -32,6 +33,11 @@ const routes = [
     name: "LastView",
     component: LastView,
   },
+  {
+    path: "/PostQuestionnaire",
+    name: "PostQuestionnaire",
+    component: PostQuestionnaire,
+  }
 ];
 
 const router = createRouter({

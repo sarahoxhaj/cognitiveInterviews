@@ -380,7 +380,7 @@ export default {
 
             this.step++;
             if (this.step > 2) {
-                this.$router.push('/next-page');
+                this.$router.push('/PostQuestionnaire');
             }
         },
         async saveDataToFirebase() {

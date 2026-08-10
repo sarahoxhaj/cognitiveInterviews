@@ -1,194 +1,344 @@
 <template>
+    <div class="bg-gray-50 dark:bg-slate-600 flex flex-col h-min-screen overflow-hidden">
+        <div class="bg-gray-50 dark:bg-slate-600 flex flex-col min-h-screen">
+            <div class="mt-20">
+                <div class="flex flex-row items-start justify-center gap-x-10">
 
-    <div class="bg-gray-50 dark:bg-slate-600 flex flex-col min-h-screen pb-8">
-        <p class="mb-2 text-2xl tracking-tight text-gray-900 dark:text-white mt-7 text-center">Rating the relevance of
-            statements to assess perceived visual complexity.</p>
+                    <div class="shrink-0">
+                        <img src="@/assets/1.png" alt="Image 1" class="size-[580px] mt-10">
+                    </div>
 
-        <div class="mt-5">
-            <div class="flex justify-center space-x-4 px-16 mt-2">
-                <img @click="openImage(require('@/assets/bar.png'))" src="@/assets/bar.png" alt="Image 1"
-                    class="w-[15rem] h-[10rem] mt-2">
-                <img @click="openImage(require('@/assets/map.png'))" src="@/assets/map.png" alt="Image 2"
-                    class="w-[16rem] h-[11rem]">
-                <img @click="openImage(require('@/assets/line2.jpeg'))" src="@/assets/line2.jpeg" alt="Image 3"
-                    class="w-[17rem] h-[9rem] mt-4">
-            </div> <br>
-            <div class="flex justify-center space-x-4 px-16 mb-10">
-                <img @click="openImage(require('@/assets/spider.png'))" src="@/assets/spider.png" alt="Image 4"
-                    class="w-[15rem] h-[11rem]">
-                <img @click="openImage(require('@/assets/1.1.png'))" src="@/assets/1.1.png" alt="Image 5"
-                    class="w-[16rem] h-[12rem]">
-                <img @click="openImage(require('@/assets/scatterPlot.png'))" src="@/assets/scatterPlot.png"
-                    alt="Image 6" class="w-[18rem] h-[10rem] mt-3">
-            </div>
-        </div>
+                    <div class="max-w-2xl">
+                        <p class="text-gray-900 dark:text-white">
 
+                            Take a moment to look at the visualization on the left. <br>The statements below reflect
+                            different ways people might experience the visual complexity of a visualization - including
+                            how it looks, how it makes you feel, and how easy it is to process.<br>Please rate how much
+                            each statement applies to your own impression of this visualization, from <b>1 (completely
+                                disagree)</b> to <b>5 (completely agree)</b>.
+                        </p><br>
 
-        <div class="text-left px-24 mt-5 dark:text-white">
-            <div>
-                <p> We would like you to rate different statements according to how relevant you consider them for
-                    judging a participant's <b>perception of the visual complexity of a visualization.</b> Above are
-                    example
-                    visualizations that could serve as a primer for the study.</p>
+                        <div v-if="step === 0">
+                            <p class="mt-5">I find this visualization easy to interpret.</p>
+                            <div class="w-full max-w-md mx-auto">
+                                <input type="range" min="1" max="5" step="1" v-model="ratings.q1" list="tickmarks"
+                                    class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:bg-gray-700" />
+                                <datalist id="tickmarks" class="flex justify-between w-full px-[2px]">
+                                    <option value="1" label="1"></option>
+                                    <option value="2" label="2"></option>
+                                    <option value="3" label="3"></option>
+                                    <option value="4" label="4"></option>
+                                    <option value="5" label="5"></option>
+                                </datalist>
+                                <div class="flex justify-between text-sm text-gray-600 dark:text-gray-300 mt-1 px-1">
+                                    <span>1<br></span>
+                                    <span>2</span>
+                                    <span>3</span>
+                                    <span>4</span>
+                                    <span>5<br></span>
+                                </div>
+                            </div>
+                            <p class="mt-5">I find this visualization easy to understand.</p>
+                            <div class="w-full max-w-md mx-auto">
+                                <input type="range" min="1" max="5" step="1" v-model="ratings.q2" list="tickmarks"
+                                    class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:bg-gray-700" />
+                                <datalist id="tickmarks" class="flex justify-between w-full px-[2px]">
+                                    <option value="1" label="1"></option>
+                                    <option value="2" label="2"></option>
+                                    <option value="3" label="3"></option>
+                                    <option value="4" label="4"></option>
+                                    <option value="5" label="5"></option>
+                                </datalist>
+                                <div class="flex justify-between text-sm text-gray-600 dark:text-gray-300 mt-1 px-1">
+                                    <span>1<br></span>
+                                    <span>2</span>
+                                    <span>3</span>
+                                    <span>4</span>
+                                    <span>5<br></span>
+                                </div>
+                            </div>
+                            <p class="mt-5">I find the visualization easy to comprehend.</p>
+                            <div class="w-full max-w-md mx-auto">
+                                <input type="range" min="1" max="5" step="1" v-model="ratings.q3" list="tickmarks"
+                                    class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:bg-gray-700" />
+                                <datalist id="tickmarks" class="flex justify-between w-full px-[2px]">
+                                    <option value="1" label="1"></option>
+                                    <option value="2" label="2"></option>
+                                    <option value="3" label="3"></option>
+                                    <option value="4" label="4"></option>
+                                    <option value="5" label="5"></option>
+                                </datalist>
+                                <div class="flex justify-between text-sm text-gray-600 dark:text-gray-300 mt-1 px-1">
+                                    <span>1<br></span>
+                                    <span>2</span>
+                                    <span>3</span>
+                                    <span>4</span>
+                                    <span>5<br></span>
+                                </div>
+                            </div>
+                            <p class="mt-5">I find the visualization well organized.</p>
+                            <div class="w-full max-w-md mx-auto">
+                                <input type="range" min="1" max="5" step="1" v-model="ratings.q4" list="tickmarks"
+                                    class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:bg-gray-700" />
+                                <datalist id="tickmarks" class="flex justify-between w-full px-[2px]">
+                                    <option value="1" label="1"></option>
+                                    <option value="2" label="2"></option>
+                                    <option value="3" label="3"></option>
+                                    <option value="4" label="4"></option>
+                                    <option value="5" label="5"></option>
+                                </datalist>
+                                <div class="flex justify-between text-sm text-gray-600 dark:text-gray-300 mt-1 px-1">
+                                    <span>1<br></span>
+                                    <span>2</span>
+                                    <span>3</span>
+                                    <span>4</span>
+                                    <span>5<br></span>
+                                </div>
+                            </div>
+                            <p class="mt-5">I find this visualization easy to use.</p>
+                            <div class="w-full max-w-md mx-auto">
+                                <input type="range" min="1" max="5" step="1" v-model="ratings.q5" list="tickmarks"
+                                    class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:bg-gray-700" />
+                                <datalist id="tickmarks" class="flex justify-between w-full px-[2px]">
+                                    <option value="1" label="1"></option>
+                                    <option value="2" label="2"></option>
+                                    <option value="3" label="3"></option>
+                                    <option value="4" label="4"></option>
+                                    <option value="5" label="5"></option>
+                                </datalist>
+                                <div class="flex justify-between text-sm text-gray-600 dark:text-gray-300 mt-1 px-1">
+                                    <span>1<br></span>
+                                    <span>2</span>
+                                    <span>3</span>
+                                    <span>4</span>
+                                    <span>5<br></span>
+                                </div>
+                            </div>
+                            <p class="mt-5">I feel irritated by this visualization.</p>
+                            <div class="w-full max-w-md mx-auto">
+                                <input type="range" min="1" max="5" step="1" v-model="ratings.q6" list="tickmarks"
+                                    class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:bg-gray-700" />
+                                <datalist id="tickmarks" class="flex justify-between w-full px-[2px]">
+                                    <option value="1" label="1"></option>
+                                    <option value="2" label="2"></option>
+                                    <option value="3" label="3"></option>
+                                    <option value="4" label="4"></option>
+                                    <option value="5" label="5"></option>
+                                </datalist>
+                                <div class="flex justify-between text-sm text-gray-600 dark:text-gray-300 mt-1 px-1">
+                                    <span>1<br></span>
+                                    <span>2</span>
+                                    <span>3</span>
+                                    <span>4</span>
+                                    <span>5<br></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div v-else-if="step === 1">
+                            <p class="mt-5">I find this visualization intuitive.</p>
+                            <div class="w-full max-w-md mx-auto">
+                                <input type="range" min="1" max="5" step="1" v-model="ratings.q7" list="tickmarks"
+                                    class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:bg-gray-700" />
+                                <datalist id="tickmarks" class="flex justify-between w-full px-[2px]">
+                                    <option value="1" label="1"></option>
+                                    <option value="2" label="2"></option>
+                                    <option value="3" label="3"></option>
+                                    <option value="4" label="4"></option>
+                                    <option value="5" label="5"></option>
+                                </datalist>
+                                <div class="flex justify-between text-sm text-gray-600 dark:text-gray-300 mt-1 px-1">
+                                    <span>1<br></span>
+                                    <span>2</span>
+                                    <span>3</span>
+                                    <span>4</span>
+                                    <span>5<br></span>
+                                </div>
+                            </div>
+                            <p class="mt-5">I find the points in the visualization easy to distinguish.</p>
+                            <div class="w-full max-w-md mx-auto">
+                                <input type="range" min="1" max="5" step="1" v-model="ratings.q8" list="tickmarks"
+                                    class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:bg-gray-700" />
+                                <datalist id="tickmarks" class="flex justify-between w-full px-[2px]">
+                                    <option value="1" label="1"></option>
+                                    <option value="2" label="2"></option>
+                                    <option value="3" label="3"></option>
+                                    <option value="4" label="4"></option>
+                                    <option value="5" label="5"></option>
+                                </datalist>
+                                <div class="flex justify-between text-sm text-gray-600 dark:text-gray-300 mt-1 px-1">
+                                    <span>1<br></span>
+                                    <span>2</span>
+                                    <span>3</span>
+                                    <span>4</span>
+                                    <span>5<br></span>
+                                </div>
+                            </div>
+                            <p class="mt-5">I find the visualization has poor pattern visibility.</p>
+                            <div class="w-full max-w-md mx-auto">
+                                <input type="range" min="1" max="5" step="1" v-model="ratings.q9" list="tickmarks"
+                                    class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:bg-gray-700" />
+                                <datalist id="tickmarks" class="flex justify-between w-full px-[2px]">
+                                    <option value="1" label="1"></option>
+                                    <option value="2" label="2"></option>
+                                    <option value="3" label="3"></option>
+                                    <option value="4" label="4"></option>
+                                    <option value="5" label="5"></option>
+                                </datalist>
+                                <div class="flex justify-between text-sm text-gray-600 dark:text-gray-300 mt-1 px-1">
+                                    <span>1<br></span>
+                                    <span>2</span>
+                                    <span>3</span>
+                                    <span>4</span>
+                                    <span>5<br></span>
+                                </div>
+                            </div>
+                            <p class="mt-5">I feel stressed by the visualization.</p>
+                            <div class="w-full max-w-md mx-auto">
+                                <input type="range" min="1" max="5" step="1" v-model="ratings.q10" list="tickmarks"
+                                    class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:bg-gray-700" />
+                                <datalist id="tickmarks" class="flex justify-between w-full px-[2px]">
+                                    <option value="1" label="1"></option>
+                                    <option value="2" label="2"></option>
+                                    <option value="3" label="3"></option>
+                                    <option value="4" label="4"></option>
+                                    <option value="5" label="5"></option>
+                                </datalist>
+                                <div class="flex justify-between text-sm text-gray-600 dark:text-gray-300 mt-1 px-1">
+                                    <span>1<br></span>
+                                    <span>2</span>
+                                    <span>3</span>
+                                    <span>4</span>
+                                    <span>5<br></span>
+                                </div>
+                            </div>
+                            <p class="mt-5">I can detect patterns in the visualization.</p>
+                            <div class="w-full max-w-md mx-auto">
+                                <input type="range" min="1" max="5" step="1" v-model="ratings.q11" list="tickmarks"
+                                    class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:bg-gray-700" />
+                                <datalist id="tickmarks" class="flex justify-between w-full px-[2px]">
+                                    <option value="1" label="1"></option>
+                                    <option value="2" label="2"></option>
+                                    <option value="3" label="3"></option>
+                                    <option value="4" label="4"></option>
+                                    <option value="5" label="5"></option>
+                                </datalist>
+                                <div class="flex justify-between text-sm text-gray-600 dark:text-gray-300 mt-1 px-1">
+                                    <span>1<br></span>
+                                    <span>2</span>
+                                    <span>3</span>
+                                    <span>4</span>
+                                    <span>5<br></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div v-else-if="step === 2">
+                            <p class="mt-5">I find the visualization is poorly designed.</p>
+                            <div class="w-full max-w-md mx-auto">
+                                <input type="range" min="1" max="5" step="1" v-model="ratings.q12" list="tickmarks"
+                                    class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:bg-gray-700" />
+                                <datalist id="tickmarks" class="flex justify-between w-full px-[2px]">
+                                    <option value="1" label="1"></option>
+                                    <option value="2" label="2"></option>
+                                    <option value="3" label="3"></option>
+                                    <option value="4" label="4"></option>
+                                    <option value="5" label="5"></option>
+                                </datalist>
+                                <div class="flex justify-between text-sm text-gray-600 dark:text-gray-300 mt-1 px-1">
+                                    <span>1<br></span>
+                                    <span>2</span>
+                                    <span>3</span>
+                                    <span>4</span>
+                                    <span>5<br></span>
+                                </div>
+                            </div>
+                            <p class="mt-5">I find the visualization is missing important details.</p>
+                            <div class="w-full max-w-md mx-auto">
+                                <input type="range" min="1" max="5" step="1" v-model="ratings.q13" list="tickmarks"
+                                    class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:bg-gray-700" />
+                                <datalist id="tickmarks" class="flex justify-between w-full px-[2px]">
+                                    <option value="1" label="1"></option>
+                                    <option value="2" label="2"></option>
+                                    <option value="3" label="3"></option>
+                                    <option value="4" label="4"></option>
+                                    <option value="5" label="5"></option>
+                                </datalist>
+                                <div class="flex justify-between text-sm text-gray-600 dark:text-gray-300 mt-1 px-1">
+                                    <span>1<br></span>
+                                    <span>2</span>
+                                    <span>3</span>
+                                    <span>4</span>
+                                    <span>5<br></span>
+                                </div>
+                            </div>
+                            <p class="mt-5">I find this visualization familiar.</p>
+                            <div class="w-full max-w-md mx-auto">
+                                <input type="range" min="1" max="5" step="1" v-model="ratings.q14" list="tickmarks"
+                                    class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:bg-gray-700" />
+                                <datalist id="tickmarks" class="flex justify-between w-full px-[2px]">
+                                    <option value="1" label="1"></option>
+                                    <option value="2" label="2"></option>
+                                    <option value="3" label="3"></option>
+                                    <option value="4" label="4"></option>
+                                    <option value="5" label="5"></option>
+                                </datalist>
+                                <div class="flex justify-between text-sm text-gray-600 dark:text-gray-300 mt-1 px-1">
+                                    <span>1<br></span>
+                                    <span>2</span>
+                                    <span>3</span>
+                                    <span>4</span>
+                                    <span>5<br></span>
+                                </div>
+                            </div>
+                            <p class="mt-5">I find that the visualization needs additional graphics to communicate
+                                effectively.</p>
+                            <div class="w-full max-w-md mx-auto">
+                                <input type="range" min="1" max="5" step="1" v-model="ratings.q15" list="tickmarks"
+                                    class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:bg-gray-700" />
+                                <datalist id="tickmarks" class="flex justify-between w-full px-[2px]">
+                                    <option value="1" label="1"></option>
+                                    <option value="2" label="2"></option>
+                                    <option value="3" label="3"></option>
+                                    <option value="4" label="4"></option>
+                                    <option value="5" label="5"></option>
+                                </datalist>
+                                <div class="flex justify-between text-sm text-gray-600 dark:text-gray-300 mt-1 px-1">
+                                    <span>1<br></span>
+                                    <span>2</span>
+                                    <span>3</span>
+                                    <span>4</span>
+                                    <span>5<br></span>
+                                </div>
+                            </div>
+                            <p class="mt-5">I cannot distinguish between colors.</p>
+                            <div class="w-full max-w-md mx-auto">
+                                <input type="range" min="1" max="5" step="1" v-model="ratings.q16" list="tickmarks"
+                                    class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:bg-gray-700" />
+                                <datalist id="tickmarks" class="flex justify-between w-full px-[2px]">
+                                    <option value="1" label="1"></option>
+                                    <option value="2" label="2"></option>
+                                    <option value="3" label="3"></option>
+                                    <option value="4" label="4"></option>
+                                    <option value="5" label="5"></option>
+                                </datalist>
+                                <div class="flex justify-between text-sm text-gray-600 dark:text-gray-300 mt-1 px-1">
+                                    <span>1<br></span>
+                                    <span>2</span>
+                                    <span>3</span>
+                                    <span>4</span>
+                                    <span>5<br></span>
+                                </div>
+                            </div>
+                        </div>
 
-                <!-- <div class="flex justify-end -mt-5">
-                    <button @click.prevent="showOption1 = !showOption1" type="submit"
-                        class="bg-sky-900 hover:bg-sky-800 text-white px-4 py-2 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto text-center">
-                        change images
-                    </button>
-                </div> -->
-            </div>
-
-            <!-- option 2 -->
-            <!-- <div v-else>
-                <div class="flex justify-center space-x-4 px-16 mt-6">
-                    <img @click="openImage(require('@/assets/2.1.png'))" src="@/assets/2.1.png" alt="Image 1"
-                        class="w-[14rem] h-[11rem]">
-                    <img @click="openImage(require('@/assets/map.png'))" src="@/assets/map.png" alt="Image 3"
-                        class="w-[15rem] h-[11rem]">
-                    <img @click="openImage(require('@/assets/map.png'))" src="@/assets/map.png" alt="Image 2"
-                        class="w-[14rem] h-[11rem]">
-                </div> <br>
-                <div class="flex justify-center space-x-4 px-16 mb-10 ml-8">
-                    <img @click="openImage(require('@/assets/2.14.png'))" src="@/assets/2.14.png" alt="Image 4"
-                        class="w-[13rem] h-[11rem]">
-                    <img @click="openImage(require('@/assets/1.3.png'))" src="@/assets/1.3.png" alt="Image 6"
-                        class="w-[13rem] h-[12rem]">
-                    <img @click="openImage(require('@/assets/1.2.png'))" src="@/assets/1.2.png" alt="Image 5"
-                        class="w-[17rem] h-[12rem]">
+                        <div class="mt-10">
+                            <button @click="nextStep" type="submit"
+                                class="bg-sky-900 hover:bg-sky-800 text-white px-4 py-2 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Next</button>
+                        </div>
+                    </div>
                 </div>
-            </div> -->
-
-            <p class="mt-5">The table below lists statements generated from a combination of deductive and inductive
-                methods. Imagine that participants
-                would use these statements to rate the visual complexity of a visualization. 
-                <br>Please
-                complete all five pages of the
-                table. Please
-                complete all <b>five pages</b> of the table.</p> <br>
-            <p>Please note that the goal is <b>not</b> to assess the overall
-                system’s complexity, but <b>only the static view of a single visualization</b>, not its interactive
-                features.
-                <!-- While the terms <span class="text-red-500 dark:text-amber-300">visual complexity</span> and <span
-                    class="text-red-500 dark:text-amber-300">visualization complexity</span> are closely related and
-                often overlap, we
-                clarify our scope here: -->
-            </p>
-            <!-- <p class="text-center mt-4 mx-12"> We are interested in how participants perceive the visual complexity of a
-                single, static data visualization — <b>focusing only on its visual appearance</b>.</p><br> -->
-            <p>The statements should remain applicable for a great variety of data
-                visualizations and easy to understand for non expert participants. <br> Finally, please keep in mind that the
-                purpose of this survey is <b>not</b> to select the final statements of the
-                scale: we seek to assess the individual relevancy of each statement, so redundancy within the list is
-                intentional at this stage.</p><br><br>
-
-            <!-- option 1 -->
-
-
-
-            <p>How relevant do you think the following terms are for describing the <b>perceived visual complexity of a
-                    visualization?</b></p>
-
-
-            <div
-                class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border border-default mt-10">
-                <table class="w-full text-sm text-left rtl:text-right text-body">
-                    <thead class="text-sm text-body bg-neutral-secondary-soft border-b rounded-base border-default">
-                        <tr>
-                            <th class="px-2 py-1 font-medium text-center font-medium"></th>
-
-
-                            <th class="px-2 py-1 font-medium text-center">
-                                <div class="flex flex-col items-center">
-                                    <span class="h-5">not at all relevant</span>
-                                    <span class="text-[15px]">1</span>
-                                </div>
-                            </th>
-
-                            <th class="px-2 py-1 font-medium text-center">
-                                <div class="flex flex-col items-center">
-                                    <span class="h-5">&nbsp;</span>
-                                    <span class="text-[15px]">2</span>
-                                </div>
-                            </th>
-
-                            <th class="px-2 py-1 font-medium text-center">
-                                <div class="flex flex-col items-center">
-                                    <span class="h-5">&nbsp;</span>
-                                    <span class="text-[15px]">3</span>
-                                </div>
-                            </th>
-
-                            <th class="px-2 py-1 font-medium text-center">
-                                <div class="flex flex-col items-center">
-                                    <span class="h-5">&nbsp;</span>
-                                    <span class="text-[15px]">4</span>
-                                </div>
-                            </th>
-
-                            <th class="px-2 py-1 font-medium text-center">
-                                <div class="flex flex-col items-center">
-                                    <span class="h-5">very relevant</span>
-                                    <span class="text-[15px]">5</span>
-                                </div>
-                            </th>
-                        </tr>
-
-                    </thead>
-
-                    <tbody>
-                        <tr v-for="question in paginatedQuestions" :key="question.id"
-                            class="bg-neutral-primary border-b border-default">
-                            <th scope="row"
-                                class="px-6 py-4 font-medium text-heading whitespace-nowrap text-right align-middle">
-                                <span v-html="question.text"></span>
-                            </th>
-
-                            <td v-for="value in 5" :key="value" class="px-6 py-4 align-middle text-center">
-                                <input v-model="ratings[question.id]" type="radio" :name="question.id" :value="value"
-                                    required class="w-6 h-6 mx-auto block scale-110">
-                            </td>
-                        </tr>
-                    </tbody>
-
-
-
-                </table>
-
-                <div class="flex justify-center mt-2 space-x-2 mb-2">
-                    <button @click="currentPage--" :disabled="currentPage === 1"
-                        class="dark:border-white px-3 py-1 border rounded disabled:opacity-50 border-sky-800 font-semibold transition-colors duration-200 text-gray-700 hover:text-white hover:bg-sky-800 dark:text-white dark:hover:text-white dark:hover:bg-sky-800">Prev</button>
-
-                    <button v-for="page in totalPages" :key="page" @click="currentPage = page" :class="['dark:border-white px-3 py-1 border border-sky-800 rounded font-semibold transition-colors duration-200 text-gray-700 hover:text-white hover:bg-sky-800 dark:text-white dark:hover:text-white dark:hover:bg-sky-800', currentPage === page
-                        ? 'bg-sky-800 text-white'
-                        : 'text-gray-700 dark:text-white']">
-                        {{ page }} </button>
-
-                    <button @click="currentPage++" :disabled="currentPage === totalPages"
-                        class="px-3 py-1 border rounded disabled:opacity-50 border-sky-800 dark:border-white font-semibold transition-colors duration-200 text-gray-700 hover:text-white hover:bg-sky-800 dark:text-white dark:hover:text-white dark:hover:bg-sky-800">Next</button>
-                </div>
-
-
             </div>
-
-            <p class="mt-12">If you have any comments or suggestions related to this survey, please write them here.</p>
-            <textarea v-model="additionalComment" id="additionalComment" rows="4"
-                class="dark:text-black mt-4 rounded-lg px-0 w-full border-[1.5px] border-gray-400 focus:ring-0 focus:outline-none dark:placeholder-gray-400 bg-gray-50"
-                required></textarea>
-
-
-            <div class="flex justify-end mt-10">
-                <button @click.prevent="saveDataToFirebase" :disabled="isSubmitting"
-                    class="bg-sky-900 hover:bg-sky-800 disabled:opacity-50 disabled:cursor-not-allowed text-white px-4 py-2 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm w-full sm:w-auto text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                    Save
-                </button>
-
-            </div>
-
         </div>
     </div>
-
-
 </template>
 
 <script>
@@ -199,77 +349,13 @@ export default {
     name: 'CollectingTerms',
     data() {
         return {
+            step: 0,
             userID: null,
             ratings: {},
             additionalComment: "",
-            showOption1: true,
             isSubmitting: false,
-            currentPage: 1,
-            rowsPerPage: 10, // sentences per page
-            questions: [
-                { id: 'q1', text: 'I find many visual elements <strong>distracting</strong>.' },
-                { id: 'q2', text: 'I find the visualization <strong>occludes information</strong>.' },
-                { id: 'q3', text: 'I find the visualization <strong>cluttered</strong>.' },
-                { id: 'q4', text: 'I find this visualization <strong>familiar</strong>.' },
-                { id: 'q5', text: 'I find this visualization <strong>easy to understand</strong>.' },
-                { id: 'q6', text: 'I find this visualization <strong>easy to interpret</strong>.' },
-                { id: 'q7', text: 'I find that the structure is <strong>unclear</strong>.' },
-                { id: 'q8', text: 'I feel the main idea is <strong>not clear</strong> within the first few seconds.' },
-                { id: 'q9', text: 'I feel <strong>confident</strong> about this visualization.' },
-                { id: 'q10', text: 'I find this visualization <strong>difficult to read</strong>.' },
-                { id: 'q11', text: 'I feel <strong>confused</strong> by the visualization.' },
-                { id: 'q12', text: 'I feel <strong>overwhelmed</strong> by the visualization.' },
-                { id: 'q13', text: 'I feel <strong>curious</strong> about this visualization.' },
-                { id: 'q14', text: 'I feel <strong>irritated</strong> by this visualization.' },
-                { id: 'q15', text: 'I find there is <strong>too much information</strong> in this visualization.' },
-                { id: 'q16', text: 'I find this visualization <strong>easy to use</strong>.' },
-                { id: 'q17', text: 'I find this visualization <strong>intuitive</strong>.' },
-                { id: 'q18', text: 'I find this visualization <strong>visually pleasing</strong>.' },
-                { id: 'q19', text: 'I feel that this visualization causes <strong>cognitive overload</strong>.' },
-                { id: 'q20', text: 'I feel the <strong>mental demand</strong> of this visualization is high.' },
-                { id: 'q21', text: 'I find the <strong>color coding</strong> overly complex.' },
-                { id: 'q22', text: 'I find the <strong>visual encoding</strong> is poor and violates good practice.' },
-                { id: 'q23', text: 'I find this visualization <strong>attractive</strong>.' },
-                { id: 'q24', text: 'I find the visualization has <strong>unnecessary complexity</strong>.' },
-                { id: 'q25', text: 'I find the visualization <strong>easy to comprehend</strong>.' },
-                { id: 'q26', text: 'I find the visualization <strong>overloaded</strong>.' },
-                { id: 'q27', text: 'I find the <strong>large number of data items</strong> makes the visualization too complex.' },
-                { id: 'q28', text: 'I find the visualization <strong>dense</strong>.' },
-                { id: 'q29', text: 'I feel <strong>informed</strong> by the visualization.' },
-                { id: 'q30', text: 'I find the visualization has <strong>overlapping information</strong>.' },
-                { id: 'q31', text: 'I feel <strong>stressed</strong> by the visualization.' },
-                { id: 'q32', text: 'I find the <strong>visualization type</strong> requires higher cognitive effort.' },
-                { id: 'q33', text: 'I feel <strong>engaged</strong> with the visualization.' },
-                { id: 'q34', text: 'I find the visualization uses <strong>too many colors</strong>.' },
-                { id: 'q35', text: 'I find the visualization provides <strong>not enough context</strong>.' },
-                { id: 'q36', text: 'I find the visualization <strong>well organized</strong>.' },
-                { id: 'q37', text: 'I find this visualization <strong>takes time to understand</strong>.' },
-                { id: 'q38', text: 'I find the points in the visualization <strong>easy to distinguish</strong>.' },
-                { id: 'q39', text: 'I cannot <strong>distinguish between colors</strong>.' },
-                { id: 'q40', text: 'I find the visualization displays <strong>several dimensions at once</strong>.' },
-                { id: 'q41', text: 'I can <strong>detect patterns</strong> in the visualization.' },
-                { id: 'q42', text: 'I find the visualization is <strong>missing important details</strong>.' },
-                { id: 'q43', text: 'I find the visualization requires <strong>effort</strong> to understand.' },
-                { id: 'q44', text: 'I find the visualization has <strong>poor pattern visibility</strong>.' },
-                { id: 'q45', text: 'I find <strong>all data points are visible</strong> in the visualization.' },
-                { id: 'q46', text: 'I find the variables in the visualization <strong>visible</strong>.' },
-                { id: 'q47', text: 'I find the visualization is <strong>poorly designed</strong>.' },
-                { id: 'q48', text: 'I find the visualization has a <strong>complex visual appearance.' },
-                { id: 'q49', text: 'I find that the visualization needs <strong>additional graphics</strong> to communicate effectively.' }
-            ],
         };
     },
-    computed: {
-        totalPages() {
-            return Math.ceil(this.questions.length / this.rowsPerPage);
-        },
-        paginatedQuestions() {
-            const start = (this.currentPage - 1) * this.rowsPerPage;
-            const end = start + this.rowsPerPage;
-            return this.questions.slice(start, end);
-        }
-    },
-
 
     mounted() {
         this.userID = sessionStorage.getItem("userID");
@@ -280,9 +366,28 @@ export default {
         }
     },
     methods: {
+        nextStep() {
+            if (this.step === 0) {
+                console.log("Ratings for first 6 items:", {
+                    q1: this.ratings.q1,
+                    q2: this.ratings.q2,
+                    q3: this.ratings.q3,
+                    q4: this.ratings.q4,
+                    q5: this.ratings.q5,
+                    q6: this.ratings.q6
+                });
+            }
+
+            this.step++;
+            if (this.step > 2) {
+                this.$router.push('/next-page');
+            }
+        },
         async saveDataToFirebase() {
             // all questions answered
-            const allAnswered = this.questions.every(q => this.ratings[q.id] !== undefined);
+            // const allAnswered = this.questions.every(q => this.ratings[q.id] !== undefined);
+            const allIds = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7', 'q8', 'q9', 'q10', 'q11', 'q12', 'q13', 'q14', 'q15', 'q16'];
+            const allAnswered = allIds.every(id => this.ratings[id] !== undefined);
             if (!allAnswered) {
                 alert("Please answer all statements before continuing.");
                 return; // exit early without disabling button
@@ -304,7 +409,6 @@ export default {
                 const ratingsData = {
                     userID: this.userID,
                     ratings: this.ratings,
-                    additionalComment: this.additionalComment
                 };
 
                 await addDoc(collection(db, "item-validation"), ratingsData);
@@ -314,10 +418,9 @@ export default {
             } catch (error) {
                 console.error("Error saving data:", error);
                 alert("There was an error saving your data. Please try again.");
-                this.isSubmitting = false; // re-enable button if error occurs
+                this.isSubmitting = false;
             }
         }
-
     }
 }
 </script>

@@ -401,7 +401,8 @@ export default {
                     id: this.userID,
                     gender: sessionStorage.getItem("gender"),
                     age: sessionStorage.getItem("age"),
-                    years: sessionStorage.getItem("years")
+                    years: sessionStorage.getItem("years"),
+                    practiceRating: sessionStorage.getItem("practiceRating"),
                 };
 
                 await addDoc(collection(db, "userData"), userData);

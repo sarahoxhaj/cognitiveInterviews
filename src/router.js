@@ -6,6 +6,7 @@ import BackgroundView from "./components/BackgroundView"
 import ItemValidation from "./components/ItemValidation.vue"
 import LastView from "./components/LastView.vue"
 import PostQuestionnaire from "./components/PostQuestionnaire.vue";
+import TrainingTask from "./components/TrainingTask.vue";
 
 const routes = [
   {
@@ -37,6 +38,11 @@ const routes = [
     path: "/PostQuestionnaire",
     name: "PostQuestionnaire",
     component: PostQuestionnaire,
+  },
+  {
+    path: "/TrainingTask",
+    name: "TrainingTask",
+    component: TrainingTask,
   }
 ];
 

@@ -20,8 +20,8 @@
             <p class="pl-6">• is 18 years or older, and</p>
             <p class="pl-6">• considers himself/herself an expert on the topic of visualization</p> -->
             <p class="mt-2"><b>What Participation Involves</b></p>
-            <p>This study is part of a research project evaluating how people perceive the visual complexity of data
-                visualizations. The session is a cognitive interview and will take approximately 30 minutes.<br>
+            <p>This study is part of a research project evaluating how people perceive the visual complexity of a data
+                visualization. The session is a cognitive interview and will take approximately 30 minutes.<br>
                 Participation involves a think-aloud task, where you will be asked to verbalize your thoughts while
                 rating
                 16 items on a Likert scale evaluating visual complexity. Before the main task, you will complete a
@@ -35,15 +35,15 @@
                 withdraw, your data will not be included in the analysis, and there will be no consequences.</p>
             <p class="mt-2"><b>Anonymity and Confidentiality</b></p>
             <p>We do not collect any personal identifying information such as your name or email. However, because the
-                session includes audio and screen recording, your voice (and any content visible on your screen) may be
+                session includes audio and screen recording, your voice (and any content visible on the screen) may be
                 identifiable to the research team. Only the research team will have access to the raw recordings, which
-                will be stored securely on password-protected devices and deleted after the analysis phase is complete.
+                will be stored securely and deleted after the analysis phase is complete.
                 Any results shared publicly will be anonymized and will not include identifiable
                 audio, video, or screen content.</p>
             <p class="mt-2"><b>Risks/Discomforts</b></p>
             <p>This research study involves minimal risk. The main risk is the small possibility of a data breach, which
                 we minimize by not collecting any personal identifying information and storing data securely on
-                password-protected computers. Study results will be published in an academic paper or thesis, and
+                password-protected computers. Study results will be published in an academic paper and
                 anonymized responses may be shared publicly.</p>
             <p class="mt-2"><b>Compensation</b></p>
             <p>Participants will receive no compensation for their participation.</p>

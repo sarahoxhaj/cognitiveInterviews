@@ -67,7 +67,7 @@
         </div>
         <p class="mt-4 dark:text-white">Click <button @click.prevent="goToConsentForm" type="submit"
                 class="ml-2 mr-2 py-2 px-2 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700  dark:text-black dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-400">Next</button>
-            if you are interested in further details about the study.</p>
+            if you are interested to continue.</p>
     </div>
 
 </template>

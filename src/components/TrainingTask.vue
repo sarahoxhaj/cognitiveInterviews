@@ -52,7 +52,7 @@ export default {
     name: 'ConsentForm',
     data() {
         return {
-            practiceRating: null,
+            practiceRating: "3",
         };
     },
     methods: {

@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-gray-50 dark:bg-slate-600 flex flex-col h-min-screen overflow-hidden">
+    <div class="bg-gray-50 dark:bg-slate-600 flex flex-col h-min-screen overflow-hidden dark:text-white">
         <div class="bg-gray-50 dark:bg-slate-600 flex flex-col min-h-screen">
             <div class="mt-20">
                 <div class="flex flex-row items-start justify-center gap-x-10">
@@ -24,11 +24,11 @@
                                 <input type="range" min="1" max="5" step="1" v-model="ratings.q1" list="tickmarks"
                                     class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:bg-gray-700" />
                                 <datalist id="tickmarks" class="flex justify-between w-full px-[2px]">
-                                    <option value="1" label="1"></option>
-                                    <option value="2" label="2"></option>
-                                    <option value="3" label="3"></option>
-                                    <option value="4" label="4"></option>
-                                    <option value="5" label="5"></option>
+                                    <option value="1" ></option>
+                                    <option value="2"></option>
+                                    <option value="3"></option>
+                                    <option value="4"></option>
+                                    <option value="5"></option>
                                 </datalist>
                                 <div class="flex justify-between text-sm text-gray-600 dark:text-gray-300 mt-1 px-1">
                                     <span>1<br></span>
@@ -43,11 +43,11 @@
                                 <input type="range" min="1" max="5" step="1" v-model="ratings.q2" list="tickmarks"
                                     class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:bg-gray-700" />
                                 <datalist id="tickmarks" class="flex justify-between w-full px-[2px]">
-                                    <option value="1" label="1"></option>
-                                    <option value="2" label="2"></option>
-                                    <option value="3" label="3"></option>
-                                    <option value="4" label="4"></option>
-                                    <option value="5" label="5"></option>
+                                    <option value="1" ></option>
+                                    <option value="2"></option>
+                                    <option value="3"></option>
+                                    <option value="4"></option>
+                                    <option value="5"></option>
                                 </datalist>
                                 <div class="flex justify-between text-sm text-gray-600 dark:text-gray-300 mt-1 px-1">
                                     <span>1<br></span>
@@ -62,11 +62,11 @@
                                 <input type="range" min="1" max="5" step="1" v-model="ratings.q3" list="tickmarks"
                                     class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:bg-gray-700" />
                                 <datalist id="tickmarks" class="flex justify-between w-full px-[2px]">
-                                    <option value="1" label="1"></option>
-                                    <option value="2" label="2"></option>
-                                    <option value="3" label="3"></option>
-                                    <option value="4" label="4"></option>
-                                    <option value="5" label="5"></option>
+                                    <option value="1" ></option>
+                                    <option value="2"></option>
+                                    <option value="3"></option>
+                                    <option value="4"></option>
+                                    <option value="5"></option>
                                 </datalist>
                                 <div class="flex justify-between text-sm text-gray-600 dark:text-gray-300 mt-1 px-1">
                                     <span>1<br></span>
@@ -81,11 +81,11 @@
                                 <input type="range" min="1" max="5" step="1" v-model="ratings.q4" list="tickmarks"
                                     class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:bg-gray-700" />
                                 <datalist id="tickmarks" class="flex justify-between w-full px-[2px]">
-                                    <option value="1" label="1"></option>
-                                    <option value="2" label="2"></option>
-                                    <option value="3" label="3"></option>
-                                    <option value="4" label="4"></option>
-                                    <option value="5" label="5"></option>
+                                    <option value="1" ></option>
+                                    <option value="2"></option>
+                                    <option value="3"></option>
+                                    <option value="4"></option>
+                                    <option value="5"></option>
                                 </datalist>
                                 <div class="flex justify-between text-sm text-gray-600 dark:text-gray-300 mt-1 px-1">
                                     <span>1<br></span>
@@ -100,11 +100,11 @@
                                 <input type="range" min="1" max="5" step="1" v-model="ratings.q5" list="tickmarks"
                                     class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:bg-gray-700" />
                                 <datalist id="tickmarks" class="flex justify-between w-full px-[2px]">
-                                    <option value="1" label="1"></option>
-                                    <option value="2" label="2"></option>
-                                    <option value="3" label="3"></option>
-                                    <option value="4" label="4"></option>
-                                    <option value="5" label="5"></option>
+                                    <option value="1" ></option>
+                                    <option value="2"></option>
+                                    <option value="3"></option>
+                                    <option value="4"></option>
+                                    <option value="5"></option>
                                 </datalist>
                                 <div class="flex justify-between text-sm text-gray-600 dark:text-gray-300 mt-1 px-1">
                                     <span>1<br></span>
@@ -119,11 +119,11 @@
                                 <input type="range" min="1" max="5" step="1" v-model="ratings.q6" list="tickmarks"
                                     class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:bg-gray-700" />
                                 <datalist id="tickmarks" class="flex justify-between w-full px-[2px]">
-                                    <option value="1" label="1"></option>
-                                    <option value="2" label="2"></option>
-                                    <option value="3" label="3"></option>
-                                    <option value="4" label="4"></option>
-                                    <option value="5" label="5"></option>
+                                    <option value="1" ></option>
+                                    <option value="2"></option>
+                                    <option value="3"></option>
+                                    <option value="4"></option>
+                                    <option value="5"></option>
                                 </datalist>
                                 <div class="flex justify-between text-sm text-gray-600 dark:text-gray-300 mt-1 px-1">
                                     <span>1<br></span>
@@ -140,11 +140,11 @@
                                 <input type="range" min="1" max="5" step="1" v-model="ratings.q7" list="tickmarks"
                                     class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:bg-gray-700" />
                                 <datalist id="tickmarks" class="flex justify-between w-full px-[2px]">
-                                    <option value="1" label="1"></option>
-                                    <option value="2" label="2"></option>
-                                    <option value="3" label="3"></option>
-                                    <option value="4" label="4"></option>
-                                    <option value="5" label="5"></option>
+                                    <option value="1" ></option>
+                                    <option value="2"></option>
+                                    <option value="3"></option>
+                                    <option value="4"></option>
+                                    <option value="5"></option>
                                 </datalist>
                                 <div class="flex justify-between text-sm text-gray-600 dark:text-gray-300 mt-1 px-1">
                                     <span>1<br></span>
@@ -159,11 +159,11 @@
                                 <input type="range" min="1" max="5" step="1" v-model="ratings.q8" list="tickmarks"
                                     class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:bg-gray-700" />
                                 <datalist id="tickmarks" class="flex justify-between w-full px-[2px]">
-                                    <option value="1" label="1"></option>
-                                    <option value="2" label="2"></option>
-                                    <option value="3" label="3"></option>
-                                    <option value="4" label="4"></option>
-                                    <option value="5" label="5"></option>
+                                    <option value="1" ></option>
+                                    <option value="2"></option>
+                                    <option value="3"></option>
+                                    <option value="4"></option>
+                                    <option value="5"></option>
                                 </datalist>
                                 <div class="flex justify-between text-sm text-gray-600 dark:text-gray-300 mt-1 px-1">
                                     <span>1<br></span>
@@ -178,11 +178,11 @@
                                 <input type="range" min="1" max="5" step="1" v-model="ratings.q9" list="tickmarks"
                                     class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:bg-gray-700" />
                                 <datalist id="tickmarks" class="flex justify-between w-full px-[2px]">
-                                    <option value="1" label="1"></option>
-                                    <option value="2" label="2"></option>
-                                    <option value="3" label="3"></option>
-                                    <option value="4" label="4"></option>
-                                    <option value="5" label="5"></option>
+                                    <option value="1" ></option>
+                                    <option value="2"></option>
+                                    <option value="3"></option>
+                                    <option value="4"></option>
+                                    <option value="5"></option>
                                 </datalist>
                                 <div class="flex justify-between text-sm text-gray-600 dark:text-gray-300 mt-1 px-1">
                                     <span>1<br></span>
@@ -197,11 +197,11 @@
                                 <input type="range" min="1" max="5" step="1" v-model="ratings.q10" list="tickmarks"
                                     class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:bg-gray-700" />
                                 <datalist id="tickmarks" class="flex justify-between w-full px-[2px]">
-                                    <option value="1" label="1"></option>
-                                    <option value="2" label="2"></option>
-                                    <option value="3" label="3"></option>
-                                    <option value="4" label="4"></option>
-                                    <option value="5" label="5"></option>
+                                    <option value="1" ></option>
+                                    <option value="2"></option>
+                                    <option value="3"></option>
+                                    <option value="4"></option>
+                                    <option value="5"></option>
                                 </datalist>
                                 <div class="flex justify-between text-sm text-gray-600 dark:text-gray-300 mt-1 px-1">
                                     <span>1<br></span>
@@ -216,11 +216,11 @@
                                 <input type="range" min="1" max="5" step="1" v-model="ratings.q11" list="tickmarks"
                                     class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:bg-gray-700" />
                                 <datalist id="tickmarks" class="flex justify-between w-full px-[2px]">
-                                    <option value="1" label="1"></option>
-                                    <option value="2" label="2"></option>
-                                    <option value="3" label="3"></option>
-                                    <option value="4" label="4"></option>
-                                    <option value="5" label="5"></option>
+                                    <option value="1" ></option>
+                                    <option value="2"></option>
+                                    <option value="3"></option>
+                                    <option value="4"></option>
+                                    <option value="5"></option>
                                 </datalist>
                                 <div class="flex justify-between text-sm text-gray-600 dark:text-gray-300 mt-1 px-1">
                                     <span>1<br></span>
@@ -237,11 +237,11 @@
                                 <input type="range" min="1" max="5" step="1" v-model="ratings.q12" list="tickmarks"
                                     class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:bg-gray-700" />
                                 <datalist id="tickmarks" class="flex justify-between w-full px-[2px]">
-                                    <option value="1" label="1"></option>
-                                    <option value="2" label="2"></option>
-                                    <option value="3" label="3"></option>
-                                    <option value="4" label="4"></option>
-                                    <option value="5" label="5"></option>
+                                    <option value="1" ></option>
+                                    <option value="2"></option>
+                                    <option value="3"></option>
+                                    <option value="4"></option>
+                                    <option value="5"></option>
                                 </datalist>
                                 <div class="flex justify-between text-sm text-gray-600 dark:text-gray-300 mt-1 px-1">
                                     <span>1<br></span>
@@ -256,11 +256,11 @@
                                 <input type="range" min="1" max="5" step="1" v-model="ratings.q13" list="tickmarks"
                                     class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:bg-gray-700" />
                                 <datalist id="tickmarks" class="flex justify-between w-full px-[2px]">
-                                    <option value="1" label="1"></option>
-                                    <option value="2" label="2"></option>
-                                    <option value="3" label="3"></option>
-                                    <option value="4" label="4"></option>
-                                    <option value="5" label="5"></option>
+                                    <option value="1" ></option>
+                                    <option value="2"></option>
+                                    <option value="3"></option>
+                                    <option value="4"></option>
+                                    <option value="5"></option>
                                 </datalist>
                                 <div class="flex justify-between text-sm text-gray-600 dark:text-gray-300 mt-1 px-1">
                                     <span>1<br></span>
@@ -275,11 +275,11 @@
                                 <input type="range" min="1" max="5" step="1" v-model="ratings.q14" list="tickmarks"
                                     class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:bg-gray-700" />
                                 <datalist id="tickmarks" class="flex justify-between w-full px-[2px]">
-                                    <option value="1" label="1"></option>
-                                    <option value="2" label="2"></option>
-                                    <option value="3" label="3"></option>
-                                    <option value="4" label="4"></option>
-                                    <option value="5" label="5"></option>
+                                    <option value="1" ></option>
+                                    <option value="2"></option>
+                                    <option value="3"></option>
+                                    <option value="4"></option>
+                                    <option value="5"></option>
                                 </datalist>
                                 <div class="flex justify-between text-sm text-gray-600 dark:text-gray-300 mt-1 px-1">
                                     <span>1<br></span>
@@ -295,11 +295,11 @@
                                 <input type="range" min="1" max="5" step="1" v-model="ratings.q15" list="tickmarks"
                                     class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:bg-gray-700" />
                                 <datalist id="tickmarks" class="flex justify-between w-full px-[2px]">
-                                    <option value="1" label="1"></option>
-                                    <option value="2" label="2"></option>
-                                    <option value="3" label="3"></option>
-                                    <option value="4" label="4"></option>
-                                    <option value="5" label="5"></option>
+                                    <option value="1" ></option>
+                                    <option value="2"></option>
+                                    <option value="3"></option>
+                                    <option value="4"></option>
+                                    <option value="5"></option>
                                 </datalist>
                                 <div class="flex justify-between text-sm text-gray-600 dark:text-gray-300 mt-1 px-1">
                                     <span>1<br></span>
@@ -314,11 +314,11 @@
                                 <input type="range" min="1" max="5" step="1" v-model="ratings.q16" list="tickmarks"
                                     class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:bg-gray-700" />
                                 <datalist id="tickmarks" class="flex justify-between w-full px-[2px]">
-                                    <option value="1" label="1"></option>
-                                    <option value="2" label="2"></option>
-                                    <option value="3" label="3"></option>
-                                    <option value="4" label="4"></option>
-                                    <option value="5" label="5"></option>
+                                    <option value="1" ></option>
+                                    <option value="2"></option>
+                                    <option value="3"></option>
+                                    <option value="4"></option>
+                                    <option value="5"></option>
                                 </datalist>
                                 <div class="flex justify-between text-sm text-gray-600 dark:text-gray-300 mt-1 px-1">
                                     <span>1<br></span>

@@ -55,6 +55,7 @@ export default {
                     id: userID,
                     gender: sessionStorage.getItem("gender"),
                     age: sessionStorage.getItem("age"),
+                    education: sessionStorage.getItem("education"),
                     practiceRating: sessionStorage.getItem("practiceRating"),
                 };
 

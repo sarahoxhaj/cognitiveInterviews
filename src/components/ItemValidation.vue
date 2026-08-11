@@ -342,8 +342,6 @@
 </template>
 
 <script>
-import { db } from '@/firebase';
-import { collection, addDoc } from 'firebase/firestore';
 
 export default {
     name: 'CollectingTerms',
@@ -351,8 +349,12 @@ export default {
         return {
             step: 0,
             userID: null,
-            ratings: {},
-            additionalComment: "",
+            ratings: {
+                q1: "3", q2: "3", q3: "3", q4: "3",
+                q5: "3", q6: "3", q7: "3", q8: "3",
+                q9: "3", q10: "3", q11: "3", q12: "3",
+                q13: "3", q14: "3", q15: "3", q16: "3",
+            },
             isSubmitting: false,
         };
     },
@@ -367,59 +369,20 @@ export default {
     },
     methods: {
         nextStep() {
-            if (this.step === 0) {
-                console.log("Ratings for first 6 items:", {
-                    q1: this.ratings.q1,
-                    q2: this.ratings.q2,
-                    q3: this.ratings.q3,
-                    q4: this.ratings.q4,
-                    q5: this.ratings.q5,
-                    q6: this.ratings.q6
-                });
-            }
 
             this.step++;
             if (this.step > 2) {
+                console.log("Current ratings object:", JSON.stringify(this.ratings));
+                const allIds = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7', 'q8', 'q9', 'q10', 'q11', 'q12', 'q13', 'q14', 'q15', 'q16'];
+                const allAnswered = allIds.every(id => this.ratings[id] !== null && this.ratings[id] !== undefined);
+                console.log("All answered?", allAnswered);
+                if (!allAnswered) {
+                    alert("Please answer all statements before continuing.");
+                    this.step = 2; // stay on last step
+                    return;
+                }
+                sessionStorage.setItem("ratings", JSON.stringify(this.ratings));
                 this.$router.push('/PostQuestionnaire');
-            }
-        },
-        async saveDataToFirebase() {
-            // all questions answered
-            // const allAnswered = this.questions.every(q => this.ratings[q.id] !== undefined);
-            const allIds = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7', 'q8', 'q9', 'q10', 'q11', 'q12', 'q13', 'q14', 'q15', 'q16'];
-            const allAnswered = allIds.every(id => this.ratings[id] !== undefined);
-            if (!allAnswered) {
-                alert("Please answer all statements before continuing.");
-                return; // exit early without disabling button
-            }
-
-            if (this.isSubmitting) return; // prevent double clicks
-            this.isSubmitting = true;
-
-            try {
-                const userData = {
-                    id: this.userID,
-                    gender: sessionStorage.getItem("gender"),
-                    age: sessionStorage.getItem("age"),
-                    years: sessionStorage.getItem("years"),
-                    practiceRating: sessionStorage.getItem("practiceRating"),
-                };
-
-                await addDoc(collection(db, "userData"), userData);
-
-                const ratingsData = {
-                    userID: this.userID,
-                    ratings: this.ratings,
-                };
-
-                await addDoc(collection(db, "item-validation"), ratingsData);
-
-                this.$router.replace({ name: 'LastView' });
-
-            } catch (error) {
-                console.error("Error saving data:", error);
-                alert("There was an error saving your data. Please try again.");
-                this.isSubmitting = false;
             }
         }
     }

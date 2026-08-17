@@ -44,8 +44,9 @@
             Please respond to this survey only if you:<br>
         </p>
         <div class="mt-2 dark:text-white max-w-xl mx-auto text-left">
-            • are fluent in English, and <br>
-            • are 18 years or older.
+            • are fluent in English, <br>
+            • are 18 years or older, and <br>
+            • feel comfortable answering questions in English
         </div>
 
         <p class="mt-7 dark:text-white">

@@ -26,7 +26,7 @@
                                 <input type="range" min="1" max="5" step="1" v-model="ratings.q1" list="tickmarks"
                                     class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:bg-gray-700" />
                                 <datalist id="tickmarks" class="flex justify-between w-full px-[2px]">
-                                    <option value="1" ></option>
+                                    <option value="1"></option>
                                     <option value="2"></option>
                                     <option value="3"></option>
                                     <option value="4"></option>
@@ -45,7 +45,7 @@
                                 <input type="range" min="1" max="5" step="1" v-model="ratings.q2" list="tickmarks"
                                     class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:bg-gray-700" />
                                 <datalist id="tickmarks" class="flex justify-between w-full px-[2px]">
-                                    <option value="1" ></option>
+                                    <option value="1"></option>
                                     <option value="2"></option>
                                     <option value="3"></option>
                                     <option value="4"></option>
@@ -64,7 +64,7 @@
                                 <input type="range" min="1" max="5" step="1" v-model="ratings.q3" list="tickmarks"
                                     class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:bg-gray-700" />
                                 <datalist id="tickmarks" class="flex justify-between w-full px-[2px]">
-                                    <option value="1" ></option>
+                                    <option value="1"></option>
                                     <option value="2"></option>
                                     <option value="3"></option>
                                     <option value="4"></option>
@@ -83,7 +83,7 @@
                                 <input type="range" min="1" max="5" step="1" v-model="ratings.q4" list="tickmarks"
                                     class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:bg-gray-700" />
                                 <datalist id="tickmarks" class="flex justify-between w-full px-[2px]">
-                                    <option value="1" ></option>
+                                    <option value="1"></option>
                                     <option value="2"></option>
                                     <option value="3"></option>
                                     <option value="4"></option>
@@ -102,7 +102,7 @@
                                 <input type="range" min="1" max="5" step="1" v-model="ratings.q5" list="tickmarks"
                                     class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:bg-gray-700" />
                                 <datalist id="tickmarks" class="flex justify-between w-full px-[2px]">
-                                    <option value="1" ></option>
+                                    <option value="1"></option>
                                     <option value="2"></option>
                                     <option value="3"></option>
                                     <option value="4"></option>
@@ -121,7 +121,7 @@
                                 <input type="range" min="1" max="5" step="1" v-model="ratings.q6" list="tickmarks"
                                     class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:bg-gray-700" />
                                 <datalist id="tickmarks" class="flex justify-between w-full px-[2px]">
-                                    <option value="1" ></option>
+                                    <option value="1"></option>
                                     <option value="2"></option>
                                     <option value="3"></option>
                                     <option value="4"></option>
@@ -142,7 +142,7 @@
                                 <input type="range" min="1" max="5" step="1" v-model="ratings.q7" list="tickmarks"
                                     class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:bg-gray-700" />
                                 <datalist id="tickmarks" class="flex justify-between w-full px-[2px]">
-                                    <option value="1" ></option>
+                                    <option value="1"></option>
                                     <option value="2"></option>
                                     <option value="3"></option>
                                     <option value="4"></option>
@@ -161,7 +161,7 @@
                                 <input type="range" min="1" max="5" step="1" v-model="ratings.q8" list="tickmarks"
                                     class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:bg-gray-700" />
                                 <datalist id="tickmarks" class="flex justify-between w-full px-[2px]">
-                                    <option value="1" ></option>
+                                    <option value="1"></option>
                                     <option value="2"></option>
                                     <option value="3"></option>
                                     <option value="4"></option>
@@ -180,7 +180,7 @@
                                 <input type="range" min="1" max="5" step="1" v-model="ratings.q9" list="tickmarks"
                                     class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:bg-gray-700" />
                                 <datalist id="tickmarks" class="flex justify-between w-full px-[2px]">
-                                    <option value="1" ></option>
+                                    <option value="1"></option>
                                     <option value="2"></option>
                                     <option value="3"></option>
                                     <option value="4"></option>
@@ -199,7 +199,7 @@
                                 <input type="range" min="1" max="5" step="1" v-model="ratings.q10" list="tickmarks"
                                     class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:bg-gray-700" />
                                 <datalist id="tickmarks" class="flex justify-between w-full px-[2px]">
-                                    <option value="1" ></option>
+                                    <option value="1"></option>
                                     <option value="2"></option>
                                     <option value="3"></option>
                                     <option value="4"></option>
@@ -218,7 +218,7 @@
                                 <input type="range" min="1" max="5" step="1" v-model="ratings.q11" list="tickmarks"
                                     class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:bg-gray-700" />
                                 <datalist id="tickmarks" class="flex justify-between w-full px-[2px]">
-                                    <option value="1" ></option>
+                                    <option value="1"></option>
                                     <option value="2"></option>
                                     <option value="3"></option>
                                     <option value="4"></option>
@@ -239,7 +239,7 @@
                                 <input type="range" min="1" max="5" step="1" v-model="ratings.q12" list="tickmarks"
                                     class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:bg-gray-700" />
                                 <datalist id="tickmarks" class="flex justify-between w-full px-[2px]">
-                                    <option value="1" ></option>
+                                    <option value="1"></option>
                                     <option value="2"></option>
                                     <option value="3"></option>
                                     <option value="4"></option>
@@ -258,7 +258,7 @@
                                 <input type="range" min="1" max="5" step="1" v-model="ratings.q13" list="tickmarks"
                                     class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:bg-gray-700" />
                                 <datalist id="tickmarks" class="flex justify-between w-full px-[2px]">
-                                    <option value="1" ></option>
+                                    <option value="1"></option>
                                     <option value="2"></option>
                                     <option value="3"></option>
                                     <option value="4"></option>
@@ -277,7 +277,7 @@
                                 <input type="range" min="1" max="5" step="1" v-model="ratings.q14" list="tickmarks"
                                     class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:bg-gray-700" />
                                 <datalist id="tickmarks" class="flex justify-between w-full px-[2px]">
-                                    <option value="1" ></option>
+                                    <option value="1"></option>
                                     <option value="2"></option>
                                     <option value="3"></option>
                                     <option value="4"></option>
@@ -297,7 +297,7 @@
                                 <input type="range" min="1" max="5" step="1" v-model="ratings.q15" list="tickmarks"
                                     class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:bg-gray-700" />
                                 <datalist id="tickmarks" class="flex justify-between w-full px-[2px]">
-                                    <option value="1" ></option>
+                                    <option value="1"></option>
                                     <option value="2"></option>
                                     <option value="3"></option>
                                     <option value="4"></option>
@@ -316,7 +316,7 @@
                                 <input type="range" min="1" max="5" step="1" v-model="ratings.q16" list="tickmarks"
                                     class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:bg-gray-700" />
                                 <datalist id="tickmarks" class="flex justify-between w-full px-[2px]">
-                                    <option value="1" ></option>
+                                    <option value="1"></option>
                                     <option value="2"></option>
                                     <option value="3"></option>
                                     <option value="4"></option>
@@ -344,7 +344,8 @@
 </template>
 
 <script>
-
+import { db } from '@/firebase';
+import { collection, addDoc } from 'firebase/firestore';
 export default {
     name: 'CollectingTerms',
     data() {
@@ -370,21 +371,51 @@ export default {
         }
     },
     methods: {
-        nextStep() {
-
+        async nextStep() {
             this.step++;
             if (this.step > 2) {
-                console.log("Current ratings object:", JSON.stringify(this.ratings));
                 const allIds = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7', 'q8', 'q9', 'q10', 'q11', 'q12', 'q13', 'q14', 'q15', 'q16'];
                 const allAnswered = allIds.every(id => this.ratings[id] !== null && this.ratings[id] !== undefined);
-                console.log("All answered?", allAnswered);
                 if (!allAnswered) {
                     alert("Please answer all statements before continuing.");
                     this.step = 2; // stay on last step
                     return;
                 }
+
                 sessionStorage.setItem("ratings", JSON.stringify(this.ratings));
-                this.$router.push('/PostQuestionnaire');
+                await this.submitSurvey();
+            }
+        },
+
+        async submitSurvey() {
+            if (this.isSubmitting) return;
+            this.isSubmitting = true;
+
+            try {
+                const userData = {
+                    id: this.userID,
+                    gender: sessionStorage.getItem("gender"),
+                    age: sessionStorage.getItem("age"),
+                    education: sessionStorage.getItem("education"),
+                    practiceRating: sessionStorage.getItem("practiceRating"),
+                };
+
+                await addDoc(collection(db, "userData"), userData);
+
+                const ratingsData = {
+                    userID: this.userID,
+                    ratings: this.ratings,
+                    additionalComment: "",
+                };
+
+                await addDoc(collection(db, "item-ratings"), ratingsData);
+
+                this.$router.replace({ name: 'LastView' });
+
+            } catch (error) {
+                console.error("Error saving data:", error);
+                alert("There was an error saving your data. Please try again.");
+                this.isSubmitting = false;
             }
         }
     }

@@ -5,7 +5,7 @@
         </p>
         <div class="text-left px-24 dark:text-white">
             <p class="mt-5"><b>In this survey you will</b> be asked to rate 16 statements from <i>strongly disagree</i>
-                to <i>strongly agree</i> and say out loud what you are thinking as you rating each statement. <br>Before
+                to <i>strongly agree</i> and say out loud what you are thinking as you are rating each statement. <br>Before
                 starting, you will complete a short task only to get familiar with this method. The full session
                 (excluding the training task) will be audio and screen-recorded. <br>This is done only for data
                 collection

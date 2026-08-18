@@ -35,10 +35,24 @@
             data
             visualization.</p>
         <p class="mt-5 max-w-5xl text-center dark:text-white">
-            This conversation will last around 30 minutes and includes a think-aloud process where you express <br> your
-            thoughts while answering the questions.<br> The audio and the screen will be recorded only for data
-            collection and quality-review purposes.
+            <b>In this survey you will</b> be asked to rate 16 statements from <i>strongly disagree</i>
+            to <i>strongly agree</i> and say out loud what you are thinking as you are rating each statement. Before
+            starting, you will complete a short task only to get familiar with this method. The full session
+            (excluding the training task) will be audio and screen-recorded. This is done only for data
+            collection
+            and quality-review purposes.
         </p>
+
+        <p class="mt-5">Taking part is <b>voluntary</b>, and you can stop aty any time without giving a reason. If
+            you choose to stop, your data will <br>not be included in the analysis and there will be no consequences.
+        </p>
+
+        <p class="mt-5">We <b>do not collect</b> any information that can <b>identify</b> you, such as your name or
+            email address. However, because the conversation <br>is recorded, your voice may be recognizable to the
+            research team. Only the research team will have access to the recordings, and they <br>will be deleted after
+            the analysis is complete. Any results shared publicly will be anonymized and will not include the
+            recordings.</p>
+
         <p class="mt-5 dark:text-white">
             If you are interested to continue and:<br>
         </p>
@@ -59,7 +73,7 @@ export default {
     name: 'FirstView',
     methods: {
         goToConsentForm() {
-            this.$router.replace({ name: 'ConsentForm' });
+            this.$router.replace({ name: 'BackgroundView' });
             this.$nextTick(() => window.scrollTo(0, 0));
         }
     }

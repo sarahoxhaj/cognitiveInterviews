@@ -66,7 +66,7 @@
                     <option value="doctoral" class="dark:text-zinc-400">Doctoral or equivalent level (e.g., PhD)
                     </option>
                     <option value="other" class="dark:text-zinc-400">Other</option>
-                    <option value="prefer-no" class="dark:text-zinc-400">Prefer not to say</option>
+                    <!-- <option value="prefer-no" class="dark:text-zinc-400">Prefer not to say</option> -->
                 </select>
             </div>
 

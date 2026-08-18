@@ -9,7 +9,9 @@
                 class="font-medium text-blue-600 dark:text-amber-300 hover:underline">
                 sara.hoxhaj@univie.ac.at
             </a></p>
-        <p>You can close this tab now.</p>
+       <p class="mt-3 dark:text-white font-medium">Click the button to have an overview of the answers.<button @click.prevent="goToOverview" type="submit"
+                class="ml-2 mr-2 py-2 px-2 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:text-black dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-400">Overview</button>
+        </p>
     </div>
 </template>
 
@@ -17,9 +19,9 @@
 export default {
     name: 'LastView',
     methods: {
-        goToLastViewThanks() {
+        goToOverview() {
             //this.$router.push('/LastViewThanks');
-            this.$router.replace({ name: 'LastViewThanks' });
+            this.$router.replace({ name: 'OverviewView' });
         }
     }
 }

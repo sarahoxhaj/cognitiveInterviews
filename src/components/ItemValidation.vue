@@ -1,24 +1,23 @@
 <template>
-    <div class="bg-gray-50 dark:bg-slate-600 flex flex-col h-min-screen overflow-hidden dark:text-white">
-        <div class="bg-gray-50 dark:bg-slate-600 flex flex-col min-h-screen">
+    <div class="bg-gray-50 dark:bg-slate-600 flex flex-col items-center h-min-screen overflow-hidden dark:text-white">
+        <div class="bg-gray-50 dark:bg-slate-600 flex flex-col items-center min-h-screen">
             <div class="mt-20">
-                <div class="flex flex-row items-start justify-center gap-x-10">
+                <div class="flex flex-row justify-center gap-x-20">
 
-                    <div class="shrink-0">
+                    <div class="shrink-0 self-start">
                         <img src="@/assets/1.png" alt="Image 1" class="size-[580px] mt-10">
                         <!-- <img src="@/assets/2.png" alt="Image 2" class="size-[580px] mt-10"> -->
                         <!-- <img src="@/assets/3.png" alt="Image 3" class="w-[750px] mt-20 ml-5"> -->
                     </div>
 
                     <div class="max-w-2xl">
-                        <p class="text-gray-900 dark:text-white">
-
+                        <!-- <p class="text-gray-900 dark:text-white">
                             Take a moment to look at the visualization on the left. <br>The statements below reflect
                             different ways people might experience the visual complexity of a visualization - including
                             how it looks, how it makes you feel, and how easy it is to process.<br>Please rate how much
                             each statement applies to your own impression of this visualization, from <b>1 (completely
                                 disagree)</b> to <b>5 (completely agree)</b>.
-                        </p><br>
+                        </p><br> -->
 
                         <div v-if="step === 0">
                             <p class="mt-5">I find this visualization easy to interpret.</p>
@@ -394,9 +393,9 @@ export default {
             try {
                 const userData = {
                     id: this.userID,
-                    gender: sessionStorage.getItem("gender"),
-                    age: sessionStorage.getItem("age"),
-                    education: sessionStorage.getItem("education"),
+                    //gender: sessionStorage.getItem("gender"),
+                    //age: sessionStorage.getItem("age"),
+                    //education: sessionStorage.getItem("education"),
                     practiceRating: sessionStorage.getItem("practiceRating"),
                 };
 

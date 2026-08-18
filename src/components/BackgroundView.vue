@@ -1,6 +1,6 @@
 <template>
 
-    <div class="bg-gray-50 dark:bg-slate-600 flex flex-col min-h-screen">
+    <div class="bg-gray-50 dark:bg-slate-600 flex flex-col items-center justify-center min-h-screen">
         <p class="mb-2 text-2xl tracking-tight text-gray-900 dark:text-white mt-7 text-center">Background</p>
         <div class="text-left max-w-2xl mx-auto px-6 mt-7 w-full">
             <p>

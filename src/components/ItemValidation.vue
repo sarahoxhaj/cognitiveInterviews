@@ -393,9 +393,9 @@ export default {
             try {
                 const userData = {
                     id: this.userID,
-                    //gender: sessionStorage.getItem("gender"),
-                    //age: sessionStorage.getItem("age"),
-                    //education: sessionStorage.getItem("education"),
+                    gender: sessionStorage.getItem("gender"),
+                    age: sessionStorage.getItem("age"),
+                    education: sessionStorage.getItem("education"),
                     practiceRating: sessionStorage.getItem("practiceRating"),
                 };
 

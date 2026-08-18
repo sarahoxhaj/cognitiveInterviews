@@ -57,10 +57,10 @@ export default {
             const selectedChoice = document.querySelector('input[name="choice"]:checked');
             if (selectedChoice && selectedChoice.value === "yes") {
                 // generate user ID
-                const userID = Math.floor(10000 + Math.random() * 90000).toString();
-                sessionStorage.setItem("userID", userID);
+                //const userID = Math.floor(10000 + Math.random() * 90000).toString();
+                //sessionStorage.setItem("userID", userID);
 
-                this.$router.replace({ name: 'TrainingTask' });
+                this.$router.replace({ name: 'BackgroundView' });
                 this.$nextTick(() => window.scrollTo(0, 0));
             } else {
                 alert('You cannot proceed if you do not click "Yes".');

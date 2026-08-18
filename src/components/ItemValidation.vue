@@ -1,7 +1,11 @@
 <template>
     <div class="bg-gray-50 dark:bg-slate-600 flex flex-col items-center h-min-screen overflow-hidden dark:text-white">
         <div class="bg-gray-50 dark:bg-slate-600 flex flex-col items-center min-h-screen">
-            <div class="mt-20">
+            <div v-if="isSubmitting" class="mt-20 text-center">
+                <p class="text-lg text-gray-700 dark:text-white">Submitting your responses...</p>
+            </div>
+
+            <div v-else class="mt-20">
                 <div class="flex flex-row justify-center gap-x-20">
 
                     <div class="shrink-0 self-start">
@@ -382,13 +386,14 @@ export default {
                 }
 
                 sessionStorage.setItem("ratings", JSON.stringify(this.ratings));
+                this.isSubmitting = true;
                 await this.submitSurvey();
             }
         },
 
         async submitSurvey() {
-            if (this.isSubmitting) return;
-            this.isSubmitting = true;
+            // if (this.isSubmitting) return;
+            // this.isSubmitting = true;
 
             try {
                 const userData = {

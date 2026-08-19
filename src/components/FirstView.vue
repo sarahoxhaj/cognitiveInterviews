@@ -43,11 +43,12 @@
             and quality-review purposes.
         </p>
 
-        <p class="mt-5">Taking part is <b>voluntary</b>, and you can stop aty any time without giving a reason. If
+        <p class="mt-5 dark:text-white">Taking part is <b>voluntary</b>, and you can stop at
+             any time without giving a reason. If
             you choose to stop, your data will <br>not be included in the analysis and there will be no consequences.
         </p>
 
-        <p class="mt-5">We <b>do not collect</b> any information that can <b>identify</b> you, such as your name or
+        <p class="mt-5 dark:text-white">We <b>do not collect</b> any information that can <b>identify</b> you, such as your name or
             email address. However, because the conversation <br>is recorded, your voice may be recognizable to the
             research team. Only the research team will have access to the recordings, and they <br>will be deleted after
             the analysis is complete. Any results shared publicly will be anonymized and will not include the

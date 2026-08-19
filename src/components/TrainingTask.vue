@@ -17,7 +17,7 @@
                 </div>
 
                 <div class="max-w-2xl">
-                    <p class="mt-5 mb-5">I can easily find the average wedding cost in Spain in this visualization.</p>
+                    <p class="mt-5 mb-5">I find this visualization messy.</p>
                     <div class="w-full max-w-md mx-auto">
                         <input type="range" min="1" max="5" step="1" list="tickmarks" v-model="practiceRating"
                             class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:text-white" />

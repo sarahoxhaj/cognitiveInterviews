@@ -43,14 +43,20 @@
             and quality-review purposes.
         </p>
 
-        <p class="mt-5 dark:text-white">Taking part is <b>voluntary</b>, and you can stop at
-             any time without giving a reason. If
+        <p class="mt-2 max-w-5xl text-center dark:text-white">
+            No prior knowledge needed!<br>
+            There are no right or wrong answers, we are just interested in your honest
+            reaction and your thought process.
+        </p>
+
+        <p class="mt-8 dark:text-white">Taking part is <b>voluntary</b>, and you can stop at
+            any time without giving a reason. If
             you choose to stop, your data will <br>not be included in the analysis and there will be no consequences.
         </p>
 
-        <p class="mt-5 dark:text-white">We <b>do not collect</b> any information that can <b>identify</b> you, such as your name or
-            email address. However, because the conversation <br>is recorded, your voice may be recognizable to the
-            research team. Only the research team will have access to the recordings, and they <br>will be deleted after
+        <p class="mt-5 dark:text-white">We <b>do not collect</b> any information that can <b>identify</b> you, such as
+            your name or
+            email address. Only the research team will have access to the records, and they <br>will be deleted after
             the analysis is complete. Any results shared publicly will be anonymized and will not include the
             recordings.</p>
 

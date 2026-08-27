@@ -3,7 +3,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import FirstView from "./components/FirstView.vue";
 import ConsentForm  from "./components/ConsentForm.vue";
 import BackgroundView from "./components/BackgroundView"
-import ItemValidation from "./components/ItemValidation.vue"
+import ItemValidation from "./components/ItemValidation"
 import LastView from "./components/LastView.vue"
 import PostQuestionnaire from "./components/PostQuestionnaire.vue";
 import TrainingTask from "./components/TrainingTask.vue";

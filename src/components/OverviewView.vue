@@ -54,6 +54,7 @@ export default {
                 3: "Neutral",
                 4: "Agree",
                 5: "Strongly Agree",
+                DK: "I don't know",
             }
         };
     },

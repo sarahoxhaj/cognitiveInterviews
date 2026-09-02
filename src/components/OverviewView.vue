@@ -19,6 +19,10 @@
                         </tr>
                     </tbody>
                 </table>
+                <div class="mt-5 text-center"> Do you feel any items are missing from this list? Check them out
+                    <button @click.prevent="goToOtherItems" type="submit"
+                        class="py-2 px-2 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:text-black dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-400">here</button>
+                </div>
             </div>
         </div>
     </div>
@@ -61,6 +65,10 @@ export default {
     methods: {
         getScoreLabel(score) {
             return this.scoreLabels[score] ?? score;
+        },
+        goToOtherItems() {
+            this.$router.replace({ name: 'OtherItems' });
+            this.$nextTick(() => window.scrollTo(0, 0));
         }
     }
 }

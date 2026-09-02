@@ -8,6 +8,7 @@ import LastView from "./components/LastView.vue"
 import PostQuestionnaire from "./components/PostQuestionnaire.vue";
 import TrainingTask from "./components/TrainingTask.vue";
 import OverviewView from "./components/OverviewView.vue";
+import OtherItems from "./components/OtherItems.vue";
 
 const routes = [
   {
@@ -49,6 +50,11 @@ const routes = [
     path: "/OverviewView",
     name: "OverviewView",
     component: OverviewView,
+  },
+  {
+    path: "/OtherItems",
+    name: "OtherItems",
+    component: OtherItems
   }
 ];
 

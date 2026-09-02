@@ -1,6 +1,7 @@
 <template>
 
     <div class="bg-gray-50 dark:bg-slate-600 flex flex-col min-h-screen items-center justify-center">
+
         <p class="mb-2 text-2xl tracking-tight text-gray-900 dark:text-white text-center">Practice Time!
         </p>
         <div class="text-left px-24 dark:text-white">
@@ -20,7 +21,8 @@
                     <p class="mt-5 mb-5">I find this visualization messy.</p>
                     <div class="w-full max-w-md mx-auto">
                         <input type="range" min="1" max="5" step="1" list="tickmarks" v-model="practiceRating"
-                            class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:text-white" />
+                            :disabled="dontKnow"
+                            class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:text-white disabled:opacity-40 disabled:cursor-not-allowed" />
                         <datalist id="tickmarks" class="flex justify-between w-full px-[2px]">
                             <option value="1"></option>
                             <option value="2"></option>
@@ -43,7 +45,16 @@
                             <span>Strongly <br>agree</span>
                         </div>
                     </div>
-                    <div class="mt-20 text-center"> Please click
+                    <div class="mt-8 text-center">
+                        <button @click="toggleDontKnow" type="button"
+                            :class="dontKnow
+                                ? 'bg-sky-900 text-white border-sky-900 dark:bg-blue-600 dark:border-blue-600'
+                                : 'bg-white text-gray-900 border-gray-200 hover:bg-gray-100 hover:text-blue-700 dark:text-black dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-400'"
+                            class="py-2 px-2 text-sm font-medium rounded-lg border focus:outline-none focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700">
+                            I do not know
+                        </button>
+                    </div>
+                    <div class="mt-14 text-center"> Please click
                         <button @click.prevent="goToBackgroundView" type="submit"
                             class="ml-2 mr-2 py-2 px-2 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:text-black dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-400">Next</button>
                         to continue with the survey.
@@ -54,15 +65,19 @@
     </div>
 </template>
 
-<script>3
+<script>
 export default {
     name: 'ConsentForm',
     data() {
         return {
             practiceRating: "3",
+            dontKnow: false,
         };
     },
     methods: {
+        toggleDontKnow() {
+            this.dontKnow = !this.dontKnow;
+        },
         goToBackgroundView() {
 
             sessionStorage.setItem("practiceRating", this.practiceRating);

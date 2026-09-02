@@ -1,21 +1,15 @@
 <template>
     <div class="bg-gray-50 dark:bg-slate-600 flex flex-col items-center justify-center min-h-screen">
-        <!-- <p class="mt-4 max-w-5xl text-center dark:text-white">
-            Do you notice when a design or image feels <i>"too much"</i> to look at? We want to find out what makes it
-            feel that way. <br>Our goal is to develop a scale that can be used to evaluate the visual complexity of a
-            data
-            visualization.</p> -->
-
-        <ol class="list-decimal mt-4 max-w-5xl text-left dark:text-white">
+        <ol :start="startNumber" class="list-decimal mt-4 max-w-5xl text-left dark:text-white">
             <li v-for="(item, index) in currentItems" :key="index" class="mt-4 first:mt-0">
                 {{ item }}
             </li>
         </ol>
 
-        <button
+        <button v-if="showButton"
             class="mt-5 py-2 px-2 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:text-black dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-400"
             @click="nextGroup">
-           other items
+            other items
         </button>
     </div>
 </template>
@@ -43,10 +37,26 @@ export default {
                 'I feel curious about this visualization.',
                 'I find the visualization uses too many colours.',
                 'I find the visualization displays several dimensions at once.',
-                'I feel the main idea is not clear within the first few seconds.'
+                'I feel the main idea is not clear within the first few seconds.',
+                'I find many visual elements distracting.',
+                'I find the visualization type requires higher cognitive effort.',
+                'I find there is too much information in this visualization.',
+                'I find the visualization requires effort to understand.',
+                'I find this visualization difficult to read.',
+                'I feel confused by the visualization.',
+                'I find the visualization overloaded.',
+                'I find the large number of data items makes the visualization too complex.',
+                'I find this visualization takes time to understand.',
+                'I find the visualization has a complex visual appearance.',
+                'I feel that this visualization causes cognitive overload.',
+                'I find the visualization cluttered.',
+                'I find the visualization has unnecessary complexity.',
+                'I feel overwhelmed by the visualization.',
+                'I feel the mental demand of this visualization is high.'
             ],
             groupSize: 17,
-            currentGroupIndex: 0
+            currentGroupIndex: 0,
+            showButton: true
         }
     },
     computed: {
@@ -59,11 +69,15 @@ export default {
         },
         currentItems() {
             return this.groups[this.currentGroupIndex]
+        },
+        startNumber() {
+            return this.currentGroupIndex * this.groupSize + 1
         }
     },
     methods: {
         nextGroup() {
             this.currentGroupIndex = (this.currentGroupIndex + 1) % this.groups.length
+            this.showButton = false
         }
     }
 }

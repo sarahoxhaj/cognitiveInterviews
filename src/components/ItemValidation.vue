@@ -10,7 +10,7 @@
 
                     <div class="shrink-0 self-start relative">
                         <div class="absolute -top-8 right-0 text-sm font-medium text-gray-700 dark:text-gray-200">
-                            {{ ratedCount }}/{{ questions.length }}
+                            {{ currentIndex + 1 }}/{{ questions.length }}
                         </div>
                         <img src="@/assets/1.png" alt="Image 1" class="size-[580px] mt-10">
                     </div>

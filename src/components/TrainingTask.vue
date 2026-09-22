@@ -42,7 +42,7 @@
                             <span></span>
                             <span></span>
                             <span></span>
-                            <span>Strongly <br>agree</span>
+                            <span class="text-right">Strongly <br>agree</span>
                         </div>
                     </div>
                     <div class="mt-8 text-center">

@@ -35,40 +35,32 @@
             data
             visualization.</p>
         <p class="mt-5 max-w-5xl text-center dark:text-white">
-            <b>In this survey you will</b> be asked to rate 16 statements from <i>strongly disagree</i>
+            <b>In this survey you will</b> be asked to rate 26 statements from <i>strongly disagree</i>
             to <i>strongly agree</i> and say out loud what you are thinking as you are rating each statement. Before
             starting, you will complete a short task only to get familiar with this method. The full session
-            (excluding the training task) will be audio and screen-recorded. This is done only for data
+            (excluding the training task) will be audio recorded. This is done only for data
             collection
             and quality-review purposes.
         </p>
 
         <p class="mt-2 max-w-5xl text-center dark:text-white">
             No prior knowledge needed!<br>
-            There are no right or wrong answers, we are just interested in your honest
+            There are <b>no right or wrong answers</b>, we are just interested in your honest
             reaction and your thought process.
         </p>
 
         <p class="mt-8 dark:text-white">Taking part is <b>voluntary</b>, and you can stop at
-            any time without giving a reason. If
+            any time without giving a reason. <br>If
             you choose to stop, your data will <br>not be included in the analysis and there will be no consequences.
         </p>
 
         <p class="mt-5 dark:text-white">We <b>do not collect</b> any information that can <b>identify</b> you, such as
             your name or
-            email address. Only the research team will have access to the records, and they <br>will be deleted after
+            email address. Only the research team will have access to the recordings, and they <br>will be deleted after
             the analysis is complete. Any results shared publicly will be anonymized and will not include the
             recordings.</p>
 
-        <p class="mt-5 dark:text-white">
-            If you are interested to continue and:<br>
-        </p>
-        <div class="mt-2 dark:text-white max-w-xl mx-auto text-left">
-            • are 18 years or older, <br>
-            • have a high school education or higher, and <br>
-            • feel comfortable answering questions in English
-        </div>
-        <p class="mt-5 dark:text-white font-medium">Please click <button @click.prevent="goToConsentForm" type="submit"
+        <p class="mt-5 dark:text-white font-medium">If you are interested to continue, please click <button @click.prevent="goToConsentForm" type="submit"
                 class="ml-2 mr-2 py-2 px-2 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:text-black dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-400">Next</button>
         </p>
     </div>

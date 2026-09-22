@@ -51,7 +51,7 @@
 
         <p class="mt-8 dark:text-white">Taking part is <b>voluntary</b>, and you can stop at
             any time without giving a reason. <br>If
-            you choose to stop, your data will <br>not be included in the analysis and there will be no consequences.
+            you choose to stop, your data will not be included in the analysis and there will be no consequences.
         </p>
 
         <p class="mt-5 dark:text-white">We <b>do not collect</b> any information that can <b>identify</b> you, such as

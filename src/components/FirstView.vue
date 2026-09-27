@@ -72,7 +72,8 @@ export default {
     name: 'FirstView',
     methods: {
         goToConsentForm() {
-            this.$router.replace({ name: 'BackgroundView' });
+            // this.$router.replace({ name: 'BackgroundView' });
+            this.$router.replace({ name: 'TrainingTask' });
             this.$nextTick(() => window.scrollTo(0, 0));
         }
     }

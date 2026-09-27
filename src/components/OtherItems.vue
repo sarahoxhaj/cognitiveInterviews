@@ -1,16 +1,18 @@
 <template>
     <div class="bg-gray-50 dark:bg-slate-600 flex flex-col items-center justify-center min-h-screen">
-        <ol :start="startNumber" class="list-decimal mt-4 max-w-5xl text-left dark:text-white">
-            <li v-for="(item, index) in currentItems" :key="index" class="mt-4 first:mt-0">
-                {{ item }}
-            </li>
-        </ol>
+        <div class="flex flex-row gap-x-16 mt-4 max-w-5xl">
+            <ol class="list-decimal text-left dark:text-white">
+                <li v-for="(item, index) in leftItems" :key="'l' + index" class="mt-4 first:mt-0">
+                    {{ item }}
+                </li>
+            </ol>
 
-        <button v-if="showButton"
-            class="mt-5 py-2 px-2 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:text-black dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-400"
-            @click="nextGroup">
-            other items
-        </button>
+            <ol :start="rightStartNumber" class="list-decimal text-left dark:text-white">
+                <li v-for="(item, index) in rightItems" :key="'r' + index" class="mt-4 first:mt-0">
+                    {{ item }}
+                </li>
+            </ol>
+        </div>
     </div>
 </template>
 
@@ -44,30 +46,20 @@ export default {
                 'I find the visualization cluttered.',
                 'I find the visualization has unnecessary complexity.',
             ],
-            groupSize: 11,
-            currentGroupIndex: 0,
-            showButton: true
         }
     },
     computed: {
-        groups() {
-            const groups = []
-            for (let i = 0; i < this.allItems.length; i += this.groupSize) {
-                groups.push(this.allItems.slice(i, i + this.groupSize))
-            }
-            return groups
+        halfSize() {
+            return Math.ceil(this.allItems.length / 2)
         },
-        currentItems() {
-            return this.groups[this.currentGroupIndex]
+        leftItems() {
+            return this.allItems.slice(0, this.halfSize)
         },
-        startNumber() {
-            return this.currentGroupIndex * this.groupSize + 1
-        }
-    },
-    methods: {
-        nextGroup() {
-            this.currentGroupIndex = (this.currentGroupIndex + 1) % this.groups.length
-            this.showButton = false
+        rightItems() {
+            return this.allItems.slice(this.halfSize)
+        },
+        rightStartNumber() {
+            return this.leftItems.length + 1
         }
     }
 }

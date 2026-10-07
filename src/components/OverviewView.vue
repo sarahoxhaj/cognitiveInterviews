@@ -2,7 +2,10 @@
     <div class="bg-gray-50 dark:bg-slate-600 flex flex-col items-center justify-center min-h-screen dark:text-white">
         <div class="flex flex-row justify-center items-center gap-x-10">
             <div>
-                <img src="@/assets/1.png" alt="Image 1" class="size-[580px]">
+                <!-- <img src="@/assets/1.png" alt="Image 1" class="size-[580px]"> -->
+                <img src="@/assets/2.png" alt="Image 2" class="size-[580px]">
+                <!-- <img src="@/assets/3.png" alt="Image 3" class="w-[750px]"> -->
+
             </div>
             <div>
                 <table class="w-full text-left border-collapse">

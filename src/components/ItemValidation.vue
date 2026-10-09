@@ -13,8 +13,8 @@
                             <b>{{ currentIndex + 1 }}/{{ questions.length }}</b>
                         </div>
                         <!-- <img src="@/assets/1.png" alt="Image 1" class="size-[580px] mt-10"> -->
-                        <img src="@/assets/2.png" alt="Image 2" class="size-[580px] mt-10">
-                        <!-- <img src="@/assets/3.png" alt="Image 3" class="w-[750px] mt-20 ml-5"> -->
+                        <!-- <img src="@/assets/2.png" alt="Image 2" class="size-[580px] mt-10"> -->
+                        <img src="@/assets/3.png" alt="Image 3" class="w-[750px] mt-20 ml-5">
 
                     </div>
 

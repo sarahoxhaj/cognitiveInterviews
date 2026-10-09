@@ -5,13 +5,13 @@
                 <p class="text-lg text-gray-700 dark:text-white">Submitting your responses...</p>
             </div>
 
-            <div v-else-if="questions.length" class="mt-20">
+            <div v-else-if="questions.length" class="mt-20 w-[1232px] max-w-full">
+                <div class="w-full text-center text-sm font-medium text-gray-700 dark:text-gray-200">
+                    <b>{{ currentIndex + 1 }}/{{ questions.length }}</b>
+                </div>
                 <div class="flex flex-row items-start justify-center gap-x-20 w-[1200px]">
-
                     <div class="w-[780px] shrink-0 self-start relative flex justify-center">
-                        <div class="absolute -top-8 right-0 text-sm font-medium text-gray-700 dark:text-gray-200">
-                            <b>{{ currentIndex + 1 }}/{{ questions.length }}</b>
-                        </div>
+
                         <!-- <img src="@/assets/1.png" alt="Image 1" class="size-[580px] mt-10"> -->
                         <!-- <img src="@/assets/2.png" alt="Image 2" class="size-[580px] mt-10"> -->
                         <!-- <img src="@/assets/3.png" alt="Image 3" class="w-[750px] mt-20 ml-5"> -->

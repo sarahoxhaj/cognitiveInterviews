@@ -88,15 +88,15 @@ export default {
     name: 'FirstView',
     data() {
         return {
-            colorVisionDeficiency: ''
+            colorVisionDeficiency: 'no'
         };
     },
     mounted() {
-        // Restore a previous answer if the person navigates back to this page
         const saved = sessionStorage.getItem('colorVisionDeficiency');
         if (saved) {
             this.colorVisionDeficiency = saved;
         }
+        this.saveColorVision();
     },
     methods: {
         saveColorVision() {

@@ -35,7 +35,7 @@
             data
             visualization.</p>
         <p class="mt-5 max-w-5xl text-center dark:text-white">
-            <b>In this survey you will</b> be asked to rate 26 statements from <i>strongly disagree</i>
+            <b>In this survey you will</b> be asked to rate 27 statements from <i>strongly disagree</i>
             to <i>strongly agree</i> and say out loud what you are thinking as you are rating each statement. Before
             starting, you will complete a short task only to get familiar with this method. The full session
             (excluding the training task) will be audio recorded. This is done only for data
@@ -60,7 +60,23 @@
             the analysis is complete. Any results shared publicly will be anonymized and will not include the
             recordings.</p>
 
-        <p class="mt-5 dark:text-white font-medium">If you are interested to continue, please click <button @click.prevent="goToConsentForm" type="submit"
+
+        <div class="mt-5 dark:text-white flex items-center justify-center flex-wrap gap-2">
+            <label for="colorVisionDeficiency" class="font-medium">
+                Do you have any known color vision deficiency (color blindness)?
+            </label>
+            <select id="colorVisionDeficiency" v-model="colorVisionDeficiency" @change="saveColorVision"
+                class="py-2 px-2 text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:text-black dark:border-gray-600">
+                <option value="" disabled>Select an answer</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+                <option value="not sure">I am not sure</option>
+            </select>
+        </div>
+
+
+        <p class="mt-5 dark:text-white font-medium">If you are interested to continue, please click <button
+                @click.prevent="goToConsentForm" type="submit"
                 class="ml-2 mr-2 py-2 px-2 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:text-black dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-400">Next</button>
         </p>
     </div>
@@ -70,8 +86,24 @@
 <script>
 export default {
     name: 'FirstView',
+    data() {
+        return {
+            colorVisionDeficiency: ''
+        };
+    },
+    mounted() {
+        // Restore a previous answer if the person navigates back to this page
+        const saved = sessionStorage.getItem('colorVisionDeficiency');
+        if (saved) {
+            this.colorVisionDeficiency = saved;
+        }
+    },
     methods: {
+        saveColorVision() {
+            sessionStorage.setItem('colorVisionDeficiency', this.colorVisionDeficiency);
+        },
         goToConsentForm() {
+            this.saveColorVision();
             // this.$router.replace({ name: 'BackgroundView' });
             this.$router.replace({ name: 'TrainingTask' });
             this.$nextTick(() => window.scrollTo(0, 0));

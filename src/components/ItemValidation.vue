@@ -81,25 +81,26 @@ const QUESTION_BANK = [
     { id: 'q5', text: 'I find this visualization easy to use.' },
     { id: 'q6', text: 'I feel irritated by this visualization.' },
     { id: 'q7', text: 'I find this visualization intuitive.' },
-    { id: 'q8', text: 'I find the points in the visualization easy to distinguish.' },
+    { id: 'q8', text: 'I can easily see the data points in the visualization.' },
     { id: 'q9', text: 'I find the visualization has poor pattern visibility.' },
     { id: 'q10', text: 'I feel stressed by the visualization.' },
     { id: 'q11', text: 'I can detect patterns in the visualization.' },
     { id: 'q12', text: 'I find the visualization is poorly designed.' },
     { id: 'q13', text: 'I find the visualization is missing important details.' },
-    { id: 'q14', text: 'I find this visualization familiar.' },
+    { id: 'q14', text: 'I find this type of visualization familiar.' },
     { id: 'q15', text: 'I find that the visualization needs additional graphics to communicate effectively.' },
     { id: 'q16', text: 'I cannot distinguish between colors.' },
     { id: 'q17', text: 'I feel overwhelmed by the visualization.' },
     { id: 'q18', text: 'I feel curious about this visualization.' },
-    { id: 'q19', text: 'I feel confident about this visualization.' },
+    { id: 'q19', text: 'I feel confident interpreting this visualization' },
     { id: 'q20', text: 'I feel informed by the visualization.' },
     { id: 'q21', text: 'I feel confused by the visualization.' },
     { id: 'q22', text: 'I feel engaged with the visualization.' },
     { id: 'q23', text: 'I feel the mental demand of this visualization is high.' },
     { id: 'q24', text: 'I find many visual elements distracting.' },
-    { id: 'q25', text: 'I find the visualization type requires higher cognitive effort.' },
+    { id: 'q25', text: 'I find the visualization type requires high cognitive effort.' },
     { id: 'q26', text: 'I feel that this visualization causes cognitive overload.' },
+    { id: 'q27', text: 'I find the point of this visualization is conveyed clearly.' },
 ];
 
 export default {
@@ -197,6 +198,7 @@ export default {
                     age: sessionStorage.getItem("age"),
                     education: sessionStorage.getItem("education"),
                     practiceRating: sessionStorage.getItem("practiceRating"),
+                    colorVisionDeficiency: sessionStorage.getItem("colorVisionDeficiency") ,
                     timestamp,
                 };
 

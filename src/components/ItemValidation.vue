@@ -92,7 +92,7 @@ const QUESTION_BANK = [
     { id: 'q16', text: 'I cannot distinguish between colors.' },
     { id: 'q17', text: 'I feel overwhelmed by the visualization.' },
     { id: 'q18', text: 'I feel curious about this visualization.' },
-    { id: 'q19', text: 'I feel confident interpreting this visualization' },
+    { id: 'q19', text: 'I feel confident interpreting this visualization.' },
     { id: 'q20', text: 'I feel informed by the visualization.' },
     { id: 'q21', text: 'I feel confused by the visualization.' },
     { id: 'q22', text: 'I feel engaged with the visualization.' },

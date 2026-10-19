@@ -66,7 +66,7 @@
                 Do you have any known color vision deficiency (color blindness)?
             </label>
             <select id="colorVisionDeficiency" v-model="colorVisionDeficiency" @change="saveColorVision"
-                class="py-2 px-2 text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:text-black dark:border-gray-600">
+                class="py-2 px-2 text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:text-black dark:border-gray-600 placeholder">
                 <option value="" disabled>Select an answer</option>
                 <option value="yes">Yes</option>
                 <option value="no">No</option>
@@ -88,21 +88,25 @@ export default {
     name: 'FirstView',
     data() {
         return {
-            colorVisionDeficiency: 'no'
+            colorVisionDeficiency: ''
         };
     },
     mounted() {
         const saved = sessionStorage.getItem('colorVisionDeficiency');
-        if (saved) {
-            this.colorVisionDeficiency = saved;
-        }
-        this.saveColorVision();
+        this.colorVisionDeficiency = saved || '';
+        // removed: this.saveColorVision();
     },
     methods: {
         saveColorVision() {
             sessionStorage.setItem('colorVisionDeficiency', this.colorVisionDeficiency);
         },
+
         goToConsentForm() {
+            if (!this.colorVisionDeficiency) {
+                alert('Please answer the color vision question before continuing.');
+                return;
+            }
+            
             this.saveColorVision();
             // this.$router.replace({ name: 'BackgroundView' });
             this.$router.replace({ name: 'TrainingTask' });

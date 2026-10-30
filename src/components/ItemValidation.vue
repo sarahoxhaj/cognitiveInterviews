@@ -12,8 +12,8 @@
                 <div class="flex flex-row items-start justify-center gap-x-20 w-[1200px]">
                     <div class="w-[780px] shrink-0 self-start relative flex justify-center">
 
-                        <!-- <img src="@/assets/1.png" alt="Image 1" class="size-[580px] mt-10"> -->
-                        <img src="@/assets/2.png" alt="Image 2" class="size-[580px] mt-10">
+                        <img src="@/assets/1.png" alt="Image 1" class="size-[580px] mt-10">
+                        <!-- <img src="@/assets/2.png" alt="Image 2" class="size-[580px] mt-10"> -->
                         <!-- <img src="@/assets/3.png" alt="Image 3" class="w-[750px] mt-20 ml-5"> -->
                         <!-- <img src="@/assets/3.png" alt="Image 3" class="max-w-full max-h-[600px] object-contain mt-20"> -->
 
@@ -80,8 +80,8 @@ const QUESTION_BANK = [
     { id: 'q4', text: 'I find the visualization well organized.' },
     { id: 'q5', text: 'I find this visualization easy to use.' },
     { id: 'q6', text: 'I feel irritated by this visualization.' },
-    { id: 'q7', text: 'I find this visualization intuitive.' },
-    { id: 'q8', text: 'I can easily see the data points in the visualization.' },
+    { id: 'q7', text: 'I find this visualization intuitive to understand.' },
+    { id: 'q8', text: 'I can easily see the data in the visualization.' },
     { id: 'q9', text: 'I find the visualization has poor pattern visibility.' },
     { id: 'q10', text: 'I feel stressed by the visualization.' },
     { id: 'q11', text: 'I can detect patterns in the visualization.' },
@@ -97,7 +97,7 @@ const QUESTION_BANK = [
     { id: 'q21', text: 'I feel confused by the visualization.' },
     { id: 'q22', text: 'I feel engaged with the visualization.' },
     { id: 'q23', text: 'I feel the mental demand of this visualization is high.' },
-    { id: 'q24', text: 'I find many visual elements distracting.' },
+    { id: 'q24', text: 'I find some visual elements in this visualization distracting.' },
     { id: 'q25', text: 'I find the visualization type requires high cognitive effort.' },
     { id: 'q26', text: 'I feel that this visualization causes cognitive overload.' },
     { id: 'q27', text: 'I find the point of this visualization is conveyed clearly.' },
@@ -198,7 +198,7 @@ export default {
                     age: sessionStorage.getItem("age"),
                     education: sessionStorage.getItem("education"),
                     practiceRating: sessionStorage.getItem("practiceRating"),
-                    colorVisionDeficiency: sessionStorage.getItem("colorVisionDeficiency") ,
+                    colorVisionDeficiency: sessionStorage.getItem("colorVisionDeficiency"),
                     timestamp,
                 };
 

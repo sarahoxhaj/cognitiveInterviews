@@ -2,8 +2,8 @@
     <div class="bg-gray-50 dark:bg-slate-600 flex flex-col items-center justify-center min-h-screen dark:text-white">
         <div class="flex flex-row justify-center items-center gap-x-10">
             <div>
-                <!-- <img src="@/assets/1.png" alt="Image 1" class="size-[580px]"> -->
-                <img src="@/assets/2.png" alt="Image 2" class="size-[580px]">
+                <img src="@/assets/1.png" alt="Image 1" class="size-[580px]">
+                <!-- <img src="@/assets/2.png" alt="Image 2" class="size-[580px]"> -->
                 <!-- <img src="@/assets/3.png" alt="Image 3" class="w-[750px]"> -->
 
             </div>
@@ -57,8 +57,8 @@ export default {
                 q4: "I find the visualization well organized.",
                 q5: "I find this visualization easy to use.",
                 q6: "I feel irritated by this visualization.",
-                q7: "I find this visualization intuitive.",
-                q8: "I can easily see the data points in the visualization.",
+                q7: "I find this visualization intuitive to understand.",
+                q8: "I can easily see the data in the visualization.",
                 q9: "I find the visualization has poor pattern visibility.",
                 q10: "I feel stressed by the visualization.",
                 q11: "I can detect patterns in the visualization.",
@@ -74,7 +74,7 @@ export default {
                 q21: "I feel confused by the visualization.",
                 q22: "I feel engaged with the visualization.",
                 q23: "I feel the mental demand of this visualization is high.",
-                q24: "I find many visual elements distracting.",
+                q24: "I find some visual elements in this visualization distracting.",
                 q25: "I find the visualization type requires high cognitive effort.",
                 q26: "I feel that this visualization causes cognitive overload.",
                 q27: "I find the point of this visualization is conveyed clearly."
